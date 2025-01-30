@@ -1,4 +1,9 @@
 flows:
+  622847f6-53c0-4a24-aefd-d79f3bb1b0de: {ver: 1, file: CSV_Processing_Pipeline.snapshot,
+    comments: First Commit., author: anonymous, created: 1738241601220, flowName: CSV
+      Processing Pipeline, flowDesc: 'Chapter 3: CSV Processing Pipeline. Reads in
+      existing.CSV file you created in Python. It will run a query for people over
+      the age of 40, then write out that record to a file.'}
   6ff807a8-68ab-4ea3-b1fa-48a0f043f9e5: {ver: 2, file: Great_Expectations_in_NiFi.snapshot,
     comments: In the previous version a wrong processor group was saved. In current
       version the correct processor group is saved., author: anonymous, created: 1738240893650,
