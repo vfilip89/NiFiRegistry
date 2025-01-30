@@ -1,4 +1,14 @@
 flows:
+  6ff807a8-68ab-4ea3-b1fa-48a0f043f9e5: {ver: 1, file: Great_Expectations_in_NiFi.snapshot,
+    comments: The book suggest to use a tap file to create python script for people.validate.
+      However it is deprecated and not used now (Jan 2025) we created a custom validate_nifi_people.py
+      Python script  for the ExecuteStreamCommand processor to handle GX validations.,
+    author: anonymous, created: 1738240626969, flowName: Great Expectations in NiFi,
+    flowDesc: 'Chapter 7: Combining NiFi and Great Expectations. Creates 1,000 records
+      and saves it as a CSV file. It then using a python script runs the people.validation
+      that is created with Great Expectations on the data and reads in the result
+      — the pass or fail JSON from the script. Lastly, it extracts the result and
+      routes the flowfile to either a pass or fail PutFile processor.'}
   b1f52a6e-9f34-423a-8bd5-1931fe49d94b: {ver: 1, file: SCF.snapshot, comments: First
       Commit with geteverypage and backfilling features., author: anonymous, created: 1738240114005,
     flowName: SCF, flowDesc: 'Chapter 6: A 311 data pipeline that connects to SeeClickFix
