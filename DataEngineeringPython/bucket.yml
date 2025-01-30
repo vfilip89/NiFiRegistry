@@ -13,6 +13,18 @@ flows:
       Expectations on the data and reads in the result — the pass or fail JSON from
       the script. Lastly, it extracts the result and routes the flowfile to either
       a pass or fail PutFile processor.'}
+  4c41c582-2256-4ac3-893c-8c7a96508925:
+    ver: 1
+    file: JSON_Processing_Pipeline.snapshot
+    comments: FIrst Commit
+    author: anonymous
+    created: 1738241792744
+    flowName: JSON Processing Pipeline
+    flowDesc: |-
+      Chapter 3: JSON Processing Pipeline. Read a file, split it into rows,
+      and write each row to a file – but you will perform some more modifications of the data
+      within the pipeline so that the rows you write to disk are different than what was in the
+      original file.
   b1f52a6e-9f34-423a-8bd5-1931fe49d94b: {ver: 1, file: SCF.snapshot, comments: First
       Commit with geteverypage and backfilling features., author: anonymous, created: 1738240114005,
     flowName: SCF, flowDesc: 'Chapter 6: A 311 data pipeline that connects to SeeClickFix
