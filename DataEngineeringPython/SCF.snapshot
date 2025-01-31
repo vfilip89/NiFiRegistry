@@ -148,6 +148,39 @@
           "destination" : {
             "comments" : "",
             "groupId" : "1284ade3-fb54-3892-ad61-f217ef1d52e4",
+            "id" : "9c69e101-3ca0-33c1-8069-a2fb92ca06f8",
+            "instanceIdentifier" : "bbe3f0bc-0194-1000-29cf-341f3192d277",
+            "name" : "UpdateCounter",
+            "type" : "PROCESSOR"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "1284ade3-fb54-3892-ad61-f217ef1d52e4",
+          "identifier" : "07fd6f00-07d2-3e24-b664-806c07a153c6",
+          "instanceIdentifier" : "bbe422b1-0194-1000-1417-79037a0d301a",
+          "labelIndex" : 1,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "partitioningAttribute" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "matched" ],
+          "source" : {
+            "comments" : "",
+            "groupId" : "1284ade3-fb54-3892-ad61-f217ef1d52e4",
+            "id" : "2f6c6133-a222-38c2-9ab1-a01de5fda657",
+            "instanceIdentifier" : "9c033e14-66af-108a-824d-7f9568090a37",
+            "name" : "EvaluateJsonPath",
+            "type" : "PROCESSOR"
+          },
+          "zIndex" : 0
+        }, {
+          "backPressureDataSizeThreshold" : "1 GB",
+          "backPressureObjectThreshold" : 10000,
+          "bends" : [ ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "comments" : "",
+            "groupId" : "1284ade3-fb54-3892-ad61-f217ef1d52e4",
             "id" : "f6251fd2-cbaa-3ca0-b6f3-353f7c5b7a7d",
             "instanceIdentifier" : "9c033e10-66af-108a-5a7f-6ebf50e18dbc",
             "name" : "SplitJson",
@@ -188,21 +221,21 @@
           },
           "flowFileExpiration" : "0 sec",
           "groupIdentifier" : "1284ade3-fb54-3892-ad61-f217ef1d52e4",
-          "identifier" : "fc6800d6-bf91-3b95-990d-c4786bc06434",
-          "instanceIdentifier" : "9c033e17-66af-108a-4e17-f81ad27ab0ed",
+          "identifier" : "6a401d9d-4b4e-3e5b-9a2d-96411b8bffe6",
+          "instanceIdentifier" : "bbe49791-0194-1000-f02f-9431cc32f9e1",
           "labelIndex" : 1,
           "loadBalanceCompression" : "DO_NOT_COMPRESS",
           "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
           "name" : "",
           "partitioningAttribute" : "",
           "prioritizers" : [ ],
-          "selectedRelationships" : [ "matched" ],
+          "selectedRelationships" : [ "success" ],
           "source" : {
             "comments" : "",
             "groupId" : "1284ade3-fb54-3892-ad61-f217ef1d52e4",
-            "id" : "2f6c6133-a222-38c2-9ab1-a01de5fda657",
-            "instanceIdentifier" : "9c033e14-66af-108a-824d-7f9568090a37",
-            "name" : "EvaluateJsonPath",
+            "id" : "9c69e101-3ca0-33c1-8069-a2fb92ca06f8",
+            "instanceIdentifier" : "bbe3f0bc-0194-1000-29cf-341f3192d277",
+            "name" : "UpdateCounter",
             "type" : "PROCESSOR"
           },
           "zIndex" : 0
@@ -456,7 +489,7 @@
               "name" : "Module Directory",
               "resourceDefinition" : {
                 "cardinality" : "MULTIPLE",
-                "resourceTypes" : [ "DIRECTORY", "FILE" ]
+                "resourceTypes" : [ "FILE", "DIRECTORY" ]
               },
               "sensitive" : false
             }
@@ -620,7 +653,7 @@
               "name" : "Module Directory",
               "resourceDefinition" : {
                 "cardinality" : "MULTIPLE",
-                "resourceTypes" : [ "DIRECTORY", "FILE" ]
+                "resourceTypes" : [ "FILE", "DIRECTORY" ]
               },
               "sensitive" : false
             }
@@ -654,8 +687,8 @@
           "name" : "My ElasticSCF",
           "penaltyDuration" : "30 sec",
           "position" : {
-            "x" : -4120.0,
-            "y" : -928.0
+            "x" : -4064.0,
+            "y" : -704.0
           },
           "properties" : {
             "elasticsearch-http-response-timeout" : "15 secs",
@@ -941,7 +974,7 @@
               "name" : "Module Directory",
               "resourceDefinition" : {
                 "cardinality" : "MULTIPLE",
-                "resourceTypes" : [ "DIRECTORY", "FILE" ]
+                "resourceTypes" : [ "FILE", "DIRECTORY" ]
               },
               "sensitive" : false
             }
@@ -1015,7 +1048,7 @@
               "name" : "Module Directory",
               "resourceDefinition" : {
                 "cardinality" : "MULTIPLE",
-                "resourceTypes" : [ "DIRECTORY", "FILE" ]
+                "resourceTypes" : [ "FILE", "DIRECTORY" ]
               },
               "sensitive" : false
             }
@@ -1028,6 +1061,58 @@
           "schedulingStrategy" : "TIMER_DRIVEN",
           "style" : { },
           "type" : "org.apache.nifi.processors.script.ExecuteScript",
+          "yieldDuration" : "1 sec"
+        }, {
+          "autoTerminatedRelationships" : [ ],
+          "backoffMechanism" : "PENALIZE_FLOWFILE",
+          "bulletinLevel" : "WARN",
+          "bundle" : {
+            "artifact" : "nifi-standard-nar",
+            "group" : "org.apache.nifi",
+            "version" : "1.28.1"
+          },
+          "comments" : "",
+          "componentType" : "PROCESSOR",
+          "concurrentlySchedulableTaskCount" : 1,
+          "executionNode" : "ALL",
+          "groupIdentifier" : "1284ade3-fb54-3892-ad61-f217ef1d52e4",
+          "identifier" : "9c69e101-3ca0-33c1-8069-a2fb92ca06f8",
+          "instanceIdentifier" : "bbe3f0bc-0194-1000-29cf-341f3192d277",
+          "maxBackoffPeriod" : "10 mins",
+          "name" : "UpdateCounter",
+          "penaltyDuration" : "30 sec",
+          "position" : {
+            "x" : -4056.0,
+            "y" : -920.0
+          },
+          "properties" : {
+            "counter-name" : "SCFtoElasticsearch",
+            "delta" : "1"
+          },
+          "propertyDescriptors" : {
+            "counter-name" : {
+              "displayName" : "Counter Name",
+              "dynamic" : false,
+              "identifiesControllerService" : false,
+              "name" : "counter-name",
+              "sensitive" : false
+            },
+            "delta" : {
+              "displayName" : "Delta",
+              "dynamic" : false,
+              "identifiesControllerService" : false,
+              "name" : "delta",
+              "sensitive" : false
+            }
+          },
+          "retriedRelationships" : [ ],
+          "retryCount" : 10,
+          "runDurationMillis" : 0,
+          "scheduledState" : "ENABLED",
+          "schedulingPeriod" : "0 sec",
+          "schedulingStrategy" : "TIMER_DRIVEN",
+          "style" : { },
+          "type" : "org.apache.nifi.processors.standard.UpdateCounter",
           "yieldDuration" : "1 sec"
         }, {
           "autoTerminatedRelationships" : [ ],
