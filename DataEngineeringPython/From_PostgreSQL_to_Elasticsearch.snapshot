@@ -15,16 +15,16 @@
           "componentType" : "CONNECTION",
           "destination" : {
             "comments" : "",
-            "groupId" : "faadb476-d78f-3dd5-8273-3ec9cf127239",
+            "groupId" : "d6d424cc-7439-3c44-86c9-b22350b5c3f5",
             "id" : "677c3af5-7eae-3e0c-a2e8-e01babc9958f",
-            "instanceIdentifier" : "49ea0d51-f45d-3f4f-e293-9e37a7feef04",
+            "instanceIdentifier" : "b6b10580-3518-30fa-ad8c-348bebecfa3e",
             "name" : "SplitText",
             "type" : "PROCESSOR"
           },
           "flowFileExpiration" : "0 sec",
-          "groupIdentifier" : "faadb476-d78f-3dd5-8273-3ec9cf127239",
+          "groupIdentifier" : "d6d424cc-7439-3c44-86c9-b22350b5c3f5",
           "identifier" : "8a2c9921-6340-352c-9e7a-2e63e3b6e699",
-          "instanceIdentifier" : "de99d646-088f-343b-1237-c2f19c50aaca",
+          "instanceIdentifier" : "c6fc92f9-cbd8-39c5-c1a7-cdf576094671",
           "labelIndex" : 1,
           "loadBalanceCompression" : "DO_NOT_COMPRESS",
           "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
@@ -34,9 +34,9 @@
           "selectedRelationships" : [ "success" ],
           "source" : {
             "comments" : "",
-            "groupId" : "faadb476-d78f-3dd5-8273-3ec9cf127239",
+            "groupId" : "d6d424cc-7439-3c44-86c9-b22350b5c3f5",
             "id" : "d175da35-3771-31ca-b2c7-ce7a34e53132",
-            "instanceIdentifier" : "54f4408a-ac14-3026-5265-9e466dece140",
+            "instanceIdentifier" : "e92a9ebb-4215-3a50-50b2-3c00476f250b",
             "name" : "ExecuteSQLRecord",
             "type" : "PROCESSOR"
           },
@@ -48,16 +48,16 @@
           "componentType" : "CONNECTION",
           "destination" : {
             "comments" : "",
-            "groupId" : "faadb476-d78f-3dd5-8273-3ec9cf127239",
+            "groupId" : "d6d424cc-7439-3c44-86c9-b22350b5c3f5",
             "id" : "723add58-a9a8-393e-bd40-2da2f9b01dbd",
-            "instanceIdentifier" : "083eafad-221e-34ba-2f5e-6f85e058bdcf",
+            "instanceIdentifier" : "0a2aed55-a61a-3654-10e3-a44c2e318de5",
             "name" : "PutElasticsearchHttp",
             "type" : "PROCESSOR"
           },
           "flowFileExpiration" : "0 sec",
-          "groupIdentifier" : "faadb476-d78f-3dd5-8273-3ec9cf127239",
+          "groupIdentifier" : "d6d424cc-7439-3c44-86c9-b22350b5c3f5",
           "identifier" : "dce25b5e-4722-3b81-b7ae-f0f7c179123f",
-          "instanceIdentifier" : "a2991d66-f214-33e0-b378-97a7c9a61c98",
+          "instanceIdentifier" : "2085aa2f-d2fa-38e7-598f-0da13a0fb710",
           "labelIndex" : 1,
           "loadBalanceCompression" : "DO_NOT_COMPRESS",
           "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
@@ -67,9 +67,9 @@
           "selectedRelationships" : [ "splits" ],
           "source" : {
             "comments" : "",
-            "groupId" : "faadb476-d78f-3dd5-8273-3ec9cf127239",
+            "groupId" : "d6d424cc-7439-3c44-86c9-b22350b5c3f5",
             "id" : "677c3af5-7eae-3e0c-a2e8-e01babc9958f",
-            "instanceIdentifier" : "49ea0d51-f45d-3f4f-e293-9e37a7feef04",
+            "instanceIdentifier" : "b6b10580-3518-30fa-ad8c-348bebecfa3e",
             "name" : "SplitText",
             "type" : "PROCESSOR"
           },
@@ -92,9 +92,9 @@
             },
             "type" : "org.apache.nifi.serialization.RecordSetWriterFactory"
           } ],
-          "groupIdentifier" : "faadb476-d78f-3dd5-8273-3ec9cf127239",
+          "groupIdentifier" : "d6d424cc-7439-3c44-86c9-b22350b5c3f5",
           "identifier" : "12395703-108b-357f-954f-cf9545e539ac",
-          "instanceIdentifier" : "30fb0635-bc9b-3ee5-f743-c0dd6835150e",
+          "instanceIdentifier" : "6013564a-3fb3-3894-ff5b-c4af73269dca",
           "name" : "DEJsonRecordSetWriter",
           "properties" : {
             "Allow Scientific Notation" : "true",
@@ -256,9 +256,9 @@
             },
             "type" : "org.apache.nifi.dbcp.DBCPService"
           } ],
-          "groupIdentifier" : "faadb476-d78f-3dd5-8273-3ec9cf127239",
+          "groupIdentifier" : "d6d424cc-7439-3c44-86c9-b22350b5c3f5",
           "identifier" : "f3e98a88-eacd-34a3-b07d-eb6dfe3e3f02",
-          "instanceIdentifier" : "d9569987-4eb4-333f-4e12-c5b41fcdb62e",
+          "instanceIdentifier" : "cb06b7f1-3c05-3c49-12de-ad12cd947b8d",
           "name" : "dataengineering",
           "properties" : {
             "dbcp-min-idle-conns" : "0",
@@ -415,17 +415,17 @@
         "flowFileConcurrency" : "UNBOUNDED",
         "flowFileOutboundPolicy" : "STREAM_WHEN_AVAILABLE",
         "funnels" : [ ],
-        "identifier" : "faadb476-d78f-3dd5-8273-3ec9cf127239",
+        "identifier" : "d6d424cc-7439-3c44-86c9-b22350b5c3f5",
         "inputPorts" : [ ],
-        "instanceIdentifier" : "cc172716-0194-1000-4c11-3cbd2face53d",
+        "instanceIdentifier" : "cc663fb2-0194-1000-4975-351450abfc3c",
         "labels" : [ ],
         "logFileSuffix" : "",
         "name" : "fromPostgreSQL2ES",
         "outputPorts" : [ ],
         "parameterContextName" : "PostgresToElasticsearchParams",
         "position" : {
-          "x" : -2848.0,
-          "y" : -1064.0
+          "x" : -2856.0,
+          "y" : -1032.0
         },
         "processGroups" : [ ],
         "processors" : [ {
@@ -441,9 +441,9 @@
           "componentType" : "PROCESSOR",
           "concurrentlySchedulableTaskCount" : 1,
           "executionNode" : "ALL",
-          "groupIdentifier" : "faadb476-d78f-3dd5-8273-3ec9cf127239",
+          "groupIdentifier" : "d6d424cc-7439-3c44-86c9-b22350b5c3f5",
           "identifier" : "723add58-a9a8-393e-bd40-2da2f9b01dbd",
-          "instanceIdentifier" : "083eafad-221e-34ba-2f5e-6f85e058bdcf",
+          "instanceIdentifier" : "0a2aed55-a61a-3654-10e3-a44c2e318de5",
           "maxBackoffPeriod" : "10 mins",
           "name" : "PutElasticsearchHttp",
           "penaltyDuration" : "30 sec",
@@ -603,9 +603,9 @@
           "componentType" : "PROCESSOR",
           "concurrentlySchedulableTaskCount" : 1,
           "executionNode" : "ALL",
-          "groupIdentifier" : "faadb476-d78f-3dd5-8273-3ec9cf127239",
+          "groupIdentifier" : "d6d424cc-7439-3c44-86c9-b22350b5c3f5",
           "identifier" : "d175da35-3771-31ca-b2c7-ce7a34e53132",
-          "instanceIdentifier" : "54f4408a-ac14-3026-5265-9e466dece140",
+          "instanceIdentifier" : "e92a9ebb-4215-3a50-50b2-3c00476f250b",
           "maxBackoffPeriod" : "10 mins",
           "name" : "ExecuteSQLRecord",
           "penaltyDuration" : "30 sec",
@@ -615,10 +615,10 @@
           },
           "properties" : {
             "esql-max-rows" : "0",
-            "esqlrecord-record-writer" : "#{Record_Writer}",
+            "esqlrecord-record-writer" : "12395703-108b-357f-954f-cf9545e539ac",
             "dbf-default-precision" : "10",
             "Max Wait Time" : "0 seconds",
-            "Database Connection Pooling Service" : "#{Database_Connection_Pooling_Service}",
+            "Database Connection Pooling Service" : "f3e98a88-eacd-34a3-b07d-eb6dfe3e3f02",
             "esql-auto-commit" : "true",
             "dbf-user-logical-types" : "false",
             "dbf-default-scale" : "0",
@@ -628,13 +628,6 @@
             "esqlrecord-normalize" : "false"
           },
           "propertyDescriptors" : {
-            "sql-pre-query" : {
-              "displayName" : "SQL Pre-Query",
-              "dynamic" : false,
-              "identifiesControllerService" : false,
-              "name" : "sql-pre-query",
-              "sensitive" : false
-            },
             "esql-max-rows" : {
               "displayName" : "Max Rows Per Flow File",
               "dynamic" : false,
@@ -642,25 +635,11 @@
               "name" : "esql-max-rows",
               "sensitive" : false
             },
-            "esql-output-batch-size" : {
-              "displayName" : "Output Batch Size",
+            "esqlrecord-record-writer" : {
+              "displayName" : "Record Writer",
               "dynamic" : false,
-              "identifiesControllerService" : false,
-              "name" : "esql-output-batch-size",
-              "sensitive" : false
-            },
-            "esql-fetch-size" : {
-              "displayName" : "Fetch Size",
-              "dynamic" : false,
-              "identifiesControllerService" : false,
-              "name" : "esql-fetch-size",
-              "sensitive" : false
-            },
-            "SQL select query" : {
-              "displayName" : "SQL select query",
-              "dynamic" : false,
-              "identifiesControllerService" : false,
-              "name" : "SQL select query",
+              "identifiesControllerService" : true,
+              "name" : "esqlrecord-record-writer",
               "sensitive" : false
             },
             "dbf-default-precision" : {
@@ -675,6 +654,13 @@
               "dynamic" : false,
               "identifiesControllerService" : false,
               "name" : "Max Wait Time",
+              "sensitive" : false
+            },
+            "Database Connection Pooling Service" : {
+              "displayName" : "Database Connection Pooling Service",
+              "dynamic" : false,
+              "identifiesControllerService" : true,
+              "name" : "Database Connection Pooling Service",
               "sensitive" : false
             },
             "sql-post-query" : {
@@ -698,18 +684,46 @@
               "name" : "dbf-user-logical-types",
               "sensitive" : false
             },
-            "esqlrecord-normalize" : {
-              "displayName" : "Normalize Table/Column Names",
-              "dynamic" : false,
-              "identifiesControllerService" : false,
-              "name" : "esqlrecord-normalize",
-              "sensitive" : false
-            },
             "dbf-default-scale" : {
               "displayName" : "Default Decimal Scale",
               "dynamic" : false,
               "identifiesControllerService" : false,
               "name" : "dbf-default-scale",
+              "sensitive" : false
+            },
+            "sql-pre-query" : {
+              "displayName" : "SQL Pre-Query",
+              "dynamic" : false,
+              "identifiesControllerService" : false,
+              "name" : "sql-pre-query",
+              "sensitive" : false
+            },
+            "esql-output-batch-size" : {
+              "displayName" : "Output Batch Size",
+              "dynamic" : false,
+              "identifiesControllerService" : false,
+              "name" : "esql-output-batch-size",
+              "sensitive" : false
+            },
+            "esql-fetch-size" : {
+              "displayName" : "Fetch Size",
+              "dynamic" : false,
+              "identifiesControllerService" : false,
+              "name" : "esql-fetch-size",
+              "sensitive" : false
+            },
+            "SQL select query" : {
+              "displayName" : "SQL select query",
+              "dynamic" : false,
+              "identifiesControllerService" : false,
+              "name" : "SQL select query",
+              "sensitive" : false
+            },
+            "esqlrecord-normalize" : {
+              "displayName" : "Normalize Table/Column Names",
+              "dynamic" : false,
+              "identifiesControllerService" : false,
+              "name" : "esqlrecord-normalize",
               "sensitive" : false
             }
           },
@@ -735,9 +749,9 @@
           "componentType" : "PROCESSOR",
           "concurrentlySchedulableTaskCount" : 1,
           "executionNode" : "ALL",
-          "groupIdentifier" : "faadb476-d78f-3dd5-8273-3ec9cf127239",
+          "groupIdentifier" : "d6d424cc-7439-3c44-86c9-b22350b5c3f5",
           "identifier" : "677c3af5-7eae-3e0c-a2e8-e01babc9958f",
-          "instanceIdentifier" : "49ea0d51-f45d-3f4f-e293-9e37a7feef04",
+          "instanceIdentifier" : "b6b10580-3518-30fa-ad8c-348bebecfa3e",
           "maxBackoffPeriod" : "10 mins",
           "name" : "SplitText",
           "penaltyDuration" : "30 sec",
@@ -811,18 +825,6 @@
             "provided" : false,
             "sensitive" : false,
             "value" : "http://localhost:9200"
-          }, {
-            "description" : "",
-            "name" : "Record_Writer",
-            "provided" : false,
-            "sensitive" : false,
-            "value" : "12395703-108b-357f-954f-cf9545e539ac"
-          }, {
-            "description" : "",
-            "name" : "Database_Connection_Pooling_Service",
-            "provided" : false,
-            "sensitive" : false,
-            "value" : "f3e98a88-eacd-34a3-b07d-eb6dfe3e3f02"
           }, {
             "description" : "",
             "name" : "index_parameter",
