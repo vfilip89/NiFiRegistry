@@ -615,10 +615,10 @@
           },
           "properties" : {
             "esql-max-rows" : "0",
-            "esqlrecord-record-writer" : "12395703-108b-357f-954f-cf9545e539ac",
+            "esqlrecord-record-writer" : "#{Record_Writer}",
             "dbf-default-precision" : "10",
             "Max Wait Time" : "0 seconds",
-            "Database Connection Pooling Service" : "f3e98a88-eacd-34a3-b07d-eb6dfe3e3f02",
+            "Database Connection Pooling Service" : "#{Database_Connection_Pooling_Service}",
             "esql-auto-commit" : "true",
             "dbf-user-logical-types" : "false",
             "dbf-default-scale" : "0",
@@ -628,74 +628,18 @@
             "esqlrecord-normalize" : "false"
           },
           "propertyDescriptors" : {
-            "esql-max-rows" : {
-              "displayName" : "Max Rows Per Flow File",
-              "dynamic" : false,
-              "identifiesControllerService" : false,
-              "name" : "esql-max-rows",
-              "sensitive" : false
-            },
-            "esqlrecord-record-writer" : {
-              "displayName" : "Record Writer",
-              "dynamic" : false,
-              "identifiesControllerService" : true,
-              "name" : "esqlrecord-record-writer",
-              "sensitive" : false
-            },
-            "dbf-default-precision" : {
-              "displayName" : "Default Decimal Precision",
-              "dynamic" : false,
-              "identifiesControllerService" : false,
-              "name" : "dbf-default-precision",
-              "sensitive" : false
-            },
-            "Max Wait Time" : {
-              "displayName" : "Max Wait Time",
-              "dynamic" : false,
-              "identifiesControllerService" : false,
-              "name" : "Max Wait Time",
-              "sensitive" : false
-            },
-            "Database Connection Pooling Service" : {
-              "displayName" : "Database Connection Pooling Service",
-              "dynamic" : false,
-              "identifiesControllerService" : true,
-              "name" : "Database Connection Pooling Service",
-              "sensitive" : false
-            },
-            "sql-post-query" : {
-              "displayName" : "SQL Post-Query",
-              "dynamic" : false,
-              "identifiesControllerService" : false,
-              "name" : "sql-post-query",
-              "sensitive" : false
-            },
-            "esql-auto-commit" : {
-              "displayName" : "Set Auto Commit",
-              "dynamic" : false,
-              "identifiesControllerService" : false,
-              "name" : "esql-auto-commit",
-              "sensitive" : false
-            },
-            "dbf-user-logical-types" : {
-              "displayName" : "Use Avro Logical Types",
-              "dynamic" : false,
-              "identifiesControllerService" : false,
-              "name" : "dbf-user-logical-types",
-              "sensitive" : false
-            },
-            "dbf-default-scale" : {
-              "displayName" : "Default Decimal Scale",
-              "dynamic" : false,
-              "identifiesControllerService" : false,
-              "name" : "dbf-default-scale",
-              "sensitive" : false
-            },
             "sql-pre-query" : {
               "displayName" : "SQL Pre-Query",
               "dynamic" : false,
               "identifiesControllerService" : false,
               "name" : "sql-pre-query",
+              "sensitive" : false
+            },
+            "esql-max-rows" : {
+              "displayName" : "Max Rows Per Flow File",
+              "dynamic" : false,
+              "identifiesControllerService" : false,
+              "name" : "esql-max-rows",
               "sensitive" : false
             },
             "esql-output-batch-size" : {
@@ -719,11 +663,53 @@
               "name" : "SQL select query",
               "sensitive" : false
             },
+            "dbf-default-precision" : {
+              "displayName" : "Default Decimal Precision",
+              "dynamic" : false,
+              "identifiesControllerService" : false,
+              "name" : "dbf-default-precision",
+              "sensitive" : false
+            },
+            "Max Wait Time" : {
+              "displayName" : "Max Wait Time",
+              "dynamic" : false,
+              "identifiesControllerService" : false,
+              "name" : "Max Wait Time",
+              "sensitive" : false
+            },
+            "sql-post-query" : {
+              "displayName" : "SQL Post-Query",
+              "dynamic" : false,
+              "identifiesControllerService" : false,
+              "name" : "sql-post-query",
+              "sensitive" : false
+            },
+            "esql-auto-commit" : {
+              "displayName" : "Set Auto Commit",
+              "dynamic" : false,
+              "identifiesControllerService" : false,
+              "name" : "esql-auto-commit",
+              "sensitive" : false
+            },
+            "dbf-user-logical-types" : {
+              "displayName" : "Use Avro Logical Types",
+              "dynamic" : false,
+              "identifiesControllerService" : false,
+              "name" : "dbf-user-logical-types",
+              "sensitive" : false
+            },
             "esqlrecord-normalize" : {
               "displayName" : "Normalize Table/Column Names",
               "dynamic" : false,
               "identifiesControllerService" : false,
               "name" : "esqlrecord-normalize",
+              "sensitive" : false
+            },
+            "dbf-default-scale" : {
+              "displayName" : "Default Decimal Scale",
+              "dynamic" : false,
+              "identifiesControllerService" : false,
+              "name" : "dbf-default-scale",
               "sensitive" : false
             }
           },
@@ -825,6 +811,18 @@
             "provided" : false,
             "sensitive" : false,
             "value" : "http://localhost:9200"
+          }, {
+            "description" : "",
+            "name" : "Record_Writer",
+            "provided" : false,
+            "sensitive" : false,
+            "value" : "12395703-108b-357f-954f-cf9545e539ac"
+          }, {
+            "description" : "",
+            "name" : "Database_Connection_Pooling_Service",
+            "provided" : false,
+            "sensitive" : false,
+            "value" : "f3e98a88-eacd-34a3-b07d-eb6dfe3e3f02"
           }, {
             "description" : "",
             "name" : "index_parameter",
