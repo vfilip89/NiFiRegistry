@@ -8,6 +8,12 @@ flows:
     comments: First Commit, author: anonymous, created: 1738242110414, flowName: From
       PostgreSQL to Elasticsearch, flowDesc: 'Chapter 4: From PostgreSQL to Elasticsearch.
       Extract data from PostgreSQL and load it to an Elasticsearch index.'}
+  33a1fd12-ae20-4d5d-8d3b-0ce3228cfde8: {ver: 1, file: Modular_Pipeline_with_Processor_Groups.snapshot,
+    comments: First Commit, author: anonymous, created: 1738590585133, flowName: Modular
+      Pipeline with Processor Groups, flowDesc: 'Chapter 10: Successfully connects
+      4 processor groups using 3 input ports and a funnel and an output port. Generates
+      JSON data from 3 similar modularized sources. Each source with different content.
+      Updates filenames from content and writes them the to disk.'}
   6ff807a8-68ab-4ea3-b1fa-48a0f043f9e5: {ver: 2, file: Great_Expectations_in_NiFi.snapshot,
     comments: In the previous version a wrong processor group was saved. In current
       version the correct processor group is saved., author: anonymous, created: 1738240893650,
