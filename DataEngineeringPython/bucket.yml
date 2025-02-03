@@ -17,6 +17,17 @@ flows:
       Expectations on the data and reads in the result — the pass or fail JSON from
       the script. Lastly, it extracts the result and routes the flowfile to either
       a pass or fail PutFile processor.'}
+  65380792-b863-4d1a-bcc4-70580dfccd20: {ver: 1, file: Studying_Backpressure.snapshot,
+    comments: First Commit, author: anonymous, created: 1738586437194, flowName: Studying
+      Backpressure, flowDesc: 'Chapter 10: Studying Backpressure with a simple flowfile
+      generator and a putfile processor.'}
+  b1f52a6e-9f34-423a-8bd5-1931fe49d94b: {ver: 3, file: SCF.snapshot, comments: 'Monitoring
+      Update. A PutSlack processor has been added to monitor Elasticsearch upsert
+      failure and send to a slack channel direct messages when there was a failure,
+      passing data from the flowfile in the message with the NiFi expression language.',
+    author: anonymous, created: 1738325440065, flowName: SCF, flowDesc: 'Chapter 6:
+      A 311 data pipeline that connects to SeeClickFix and downloads all the issues
+      for a city, and then loads it in Elasticsearch.'}
   4c41c582-2256-4ac3-893c-8c7a96508925:
     ver: 1
     file: JSON_Processing_Pipeline.snapshot
@@ -29,12 +40,5 @@ flows:
       and write each row to a file – but you will perform some more modifications of the data
       within the pipeline so that the rows you write to disk are different than what was in the
       original file.
-  b1f52a6e-9f34-423a-8bd5-1931fe49d94b: {ver: 3, file: SCF.snapshot, comments: 'Monitoring
-      Update. A PutSlack processor has been added to monitor Elasticsearch upsert
-      failure and send to a slack channel direct messages when there was a failure,
-      passing data from the flowfile in the message with the NiFi expression language.',
-    author: anonymous, created: 1738325440065, flowName: SCF, flowDesc: 'Chapter 6:
-      A 311 data pipeline that connects to SeeClickFix and downloads all the issues
-      for a city, and then loads it in Elasticsearch.'}
 layoutVer: 1
 bucketId: ded13710-dd4f-46e3-842f-c8e48f80e2dc
