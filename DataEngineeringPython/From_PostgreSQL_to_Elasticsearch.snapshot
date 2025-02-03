@@ -387,7 +387,7 @@
               "name" : "database-driver-locations",
               "resourceDefinition" : {
                 "cardinality" : "MULTIPLE",
-                "resourceTypes" : [ "URL", "FILE", "DIRECTORY" ]
+                "resourceTypes" : [ "FILE", "DIRECTORY", "URL" ]
               },
               "sensitive" : false
             },
@@ -451,8 +451,8 @@
           },
           "properties" : {
             "elasticsearch-http-response-timeout" : "15 secs",
-            "put-es-index" : "fromnifi",
-            "elasticsearch-http-url" : "http://localhost:9200",
+            "put-es-index" : "${index}",
+            "elasticsearch-http-url" : "${elastic}",
             "put-es-batch-size" : "100",
             "elasticsearch-http-connect-timeout" : "5 secs",
             "put-es-index-op" : "index",
@@ -608,8 +608,8 @@
           "name" : "ExecuteSQLRecord",
           "penaltyDuration" : "30 sec",
           "position" : {
-            "x" : -2768.805200981229,
-            "y" : -1277.1175608911046
+            "x" : -2768.0,
+            "y" : -1280.0
           },
           "properties" : {
             "esql-max-rows" : "0",
