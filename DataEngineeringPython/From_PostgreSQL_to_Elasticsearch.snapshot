@@ -387,7 +387,7 @@
               "name" : "database-driver-locations",
               "resourceDefinition" : {
                 "cardinality" : "MULTIPLE",
-                "resourceTypes" : [ "FILE", "DIRECTORY", "URL" ]
+                "resourceTypes" : [ "FILE", "URL", "DIRECTORY" ]
               },
               "sensitive" : false
             },
@@ -419,8 +419,10 @@
         "inputPorts" : [ ],
         "instanceIdentifier" : "cc172716-0194-1000-4c11-3cbd2face53d",
         "labels" : [ ],
+        "logFileSuffix" : "",
         "name" : "fromPostgreSQL2ES",
         "outputPorts" : [ ],
+        "parameterContextName" : "PostgresToElasticsearchParams",
         "position" : {
           "x" : -2848.0,
           "y" : -1064.0
@@ -451,8 +453,8 @@
           },
           "properties" : {
             "elasticsearch-http-response-timeout" : "15 secs",
-            "put-es-index" : "${index}",
-            "elasticsearch-http-url" : "${elastic}",
+            "put-es-index" : "#{index_parameter}",
+            "elasticsearch-http-url" : "#{elastic_parameter}",
             "put-es-batch-size" : "100",
             "elasticsearch-http-connect-timeout" : "5 secs",
             "put-es-index-op" : "index",
@@ -812,7 +814,26 @@
         "remoteProcessGroups" : [ ]
       },
       "flowEncodingVersion" : "1.0",
-      "parameterContexts" : { },
+      "parameterContexts" : {
+        "PostgresToElasticsearchParams" : {
+          "componentType" : "PARAMETER_CONTEXT",
+          "inheritedParameterContexts" : [ ],
+          "name" : "PostgresToElasticsearchParams",
+          "parameters" : [ {
+            "description" : "",
+            "name" : "elastic_parameter",
+            "provided" : false,
+            "sensitive" : false,
+            "value" : "http://localhost:9200"
+          }, {
+            "description" : "",
+            "name" : "index_parameter",
+            "provided" : false,
+            "sensitive" : false,
+            "value" : "nifi_index"
+          } ]
+        }
+      },
       "parameterProviders" : { }
     }
   }
