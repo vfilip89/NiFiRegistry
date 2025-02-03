@@ -15,16 +15,16 @@
           "componentType" : "CONNECTION",
           "destination" : {
             "comments" : "",
-            "groupId" : "219c919c-e828-3700-8ac9-ade825b87e83",
+            "groupId" : "faadb476-d78f-3dd5-8273-3ec9cf127239",
             "id" : "677c3af5-7eae-3e0c-a2e8-e01babc9958f",
-            "instanceIdentifier" : "470069a1-6d64-3f69-61e1-5951dc2d94b9",
+            "instanceIdentifier" : "49ea0d51-f45d-3f4f-e293-9e37a7feef04",
             "name" : "SplitText",
             "type" : "PROCESSOR"
           },
           "flowFileExpiration" : "0 sec",
-          "groupIdentifier" : "219c919c-e828-3700-8ac9-ade825b87e83",
+          "groupIdentifier" : "faadb476-d78f-3dd5-8273-3ec9cf127239",
           "identifier" : "8a2c9921-6340-352c-9e7a-2e63e3b6e699",
-          "instanceIdentifier" : "c3039ffe-02d6-3c68-6c26-931d0a0ad8fe",
+          "instanceIdentifier" : "de99d646-088f-343b-1237-c2f19c50aaca",
           "labelIndex" : 1,
           "loadBalanceCompression" : "DO_NOT_COMPRESS",
           "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
@@ -34,9 +34,9 @@
           "selectedRelationships" : [ "success" ],
           "source" : {
             "comments" : "",
-            "groupId" : "219c919c-e828-3700-8ac9-ade825b87e83",
+            "groupId" : "faadb476-d78f-3dd5-8273-3ec9cf127239",
             "id" : "d175da35-3771-31ca-b2c7-ce7a34e53132",
-            "instanceIdentifier" : "1d1411f0-2030-35f1-1ccf-4b442948c563",
+            "instanceIdentifier" : "54f4408a-ac14-3026-5265-9e466dece140",
             "name" : "ExecuteSQLRecord",
             "type" : "PROCESSOR"
           },
@@ -48,16 +48,16 @@
           "componentType" : "CONNECTION",
           "destination" : {
             "comments" : "",
-            "groupId" : "219c919c-e828-3700-8ac9-ade825b87e83",
+            "groupId" : "faadb476-d78f-3dd5-8273-3ec9cf127239",
             "id" : "723add58-a9a8-393e-bd40-2da2f9b01dbd",
-            "instanceIdentifier" : "aa7d0803-c1fa-3ccd-e342-1517ef290726",
+            "instanceIdentifier" : "083eafad-221e-34ba-2f5e-6f85e058bdcf",
             "name" : "PutElasticsearchHttp",
             "type" : "PROCESSOR"
           },
           "flowFileExpiration" : "0 sec",
-          "groupIdentifier" : "219c919c-e828-3700-8ac9-ade825b87e83",
+          "groupIdentifier" : "faadb476-d78f-3dd5-8273-3ec9cf127239",
           "identifier" : "dce25b5e-4722-3b81-b7ae-f0f7c179123f",
-          "instanceIdentifier" : "b11f3b83-86ca-3fe1-89f8-0355ccf6e9e5",
+          "instanceIdentifier" : "a2991d66-f214-33e0-b378-97a7c9a61c98",
           "labelIndex" : 1,
           "loadBalanceCompression" : "DO_NOT_COMPRESS",
           "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
@@ -67,9 +67,9 @@
           "selectedRelationships" : [ "splits" ],
           "source" : {
             "comments" : "",
-            "groupId" : "219c919c-e828-3700-8ac9-ade825b87e83",
+            "groupId" : "faadb476-d78f-3dd5-8273-3ec9cf127239",
             "id" : "677c3af5-7eae-3e0c-a2e8-e01babc9958f",
-            "instanceIdentifier" : "470069a1-6d64-3f69-61e1-5951dc2d94b9",
+            "instanceIdentifier" : "49ea0d51-f45d-3f4f-e293-9e37a7feef04",
             "name" : "SplitText",
             "type" : "PROCESSOR"
           },
@@ -92,9 +92,9 @@
             },
             "type" : "org.apache.nifi.serialization.RecordSetWriterFactory"
           } ],
-          "groupIdentifier" : "219c919c-e828-3700-8ac9-ade825b87e83",
+          "groupIdentifier" : "faadb476-d78f-3dd5-8273-3ec9cf127239",
           "identifier" : "12395703-108b-357f-954f-cf9545e539ac",
-          "instanceIdentifier" : "d216c3f8-7f0d-31ea-d50c-80802e1f19e4",
+          "instanceIdentifier" : "30fb0635-bc9b-3ee5-f743-c0dd6835150e",
           "name" : "DEJsonRecordSetWriter",
           "properties" : {
             "Allow Scientific Notation" : "true",
@@ -256,9 +256,9 @@
             },
             "type" : "org.apache.nifi.dbcp.DBCPService"
           } ],
-          "groupIdentifier" : "219c919c-e828-3700-8ac9-ade825b87e83",
+          "groupIdentifier" : "faadb476-d78f-3dd5-8273-3ec9cf127239",
           "identifier" : "f3e98a88-eacd-34a3-b07d-eb6dfe3e3f02",
-          "instanceIdentifier" : "92dd7b6b-9133-3331-54e7-821b0f1bf57e",
+          "instanceIdentifier" : "d9569987-4eb4-333f-4e12-c5b41fcdb62e",
           "name" : "dataengineering",
           "properties" : {
             "dbcp-min-idle-conns" : "0",
@@ -387,7 +387,7 @@
               "name" : "database-driver-locations",
               "resourceDefinition" : {
                 "cardinality" : "MULTIPLE",
-                "resourceTypes" : [ "DIRECTORY", "URL", "FILE" ]
+                "resourceTypes" : [ "URL", "FILE", "DIRECTORY" ]
               },
               "sensitive" : false
             },
@@ -415,15 +415,15 @@
         "flowFileConcurrency" : "UNBOUNDED",
         "flowFileOutboundPolicy" : "STREAM_WHEN_AVAILABLE",
         "funnels" : [ ],
-        "identifier" : "219c919c-e828-3700-8ac9-ade825b87e83",
+        "identifier" : "faadb476-d78f-3dd5-8273-3ec9cf127239",
         "inputPorts" : [ ],
-        "instanceIdentifier" : "9e1e3a88-9247-15fe-c4d7-c768979dfb23",
+        "instanceIdentifier" : "cc172716-0194-1000-4c11-3cbd2face53d",
         "labels" : [ ],
         "name" : "fromPostgreSQL2ES",
         "outputPorts" : [ ],
         "position" : {
-          "x" : -2759.518881693786,
-          "y" : -928.3711629868003
+          "x" : -2848.0,
+          "y" : -1064.0
         },
         "processGroups" : [ ],
         "processors" : [ {
@@ -439,9 +439,9 @@
           "componentType" : "PROCESSOR",
           "concurrentlySchedulableTaskCount" : 1,
           "executionNode" : "ALL",
-          "groupIdentifier" : "219c919c-e828-3700-8ac9-ade825b87e83",
+          "groupIdentifier" : "faadb476-d78f-3dd5-8273-3ec9cf127239",
           "identifier" : "723add58-a9a8-393e-bd40-2da2f9b01dbd",
-          "instanceIdentifier" : "aa7d0803-c1fa-3ccd-e342-1517ef290726",
+          "instanceIdentifier" : "083eafad-221e-34ba-2f5e-6f85e058bdcf",
           "maxBackoffPeriod" : "10 mins",
           "name" : "PutElasticsearchHttp",
           "penaltyDuration" : "30 sec",
@@ -601,9 +601,9 @@
           "componentType" : "PROCESSOR",
           "concurrentlySchedulableTaskCount" : 1,
           "executionNode" : "ALL",
-          "groupIdentifier" : "219c919c-e828-3700-8ac9-ade825b87e83",
+          "groupIdentifier" : "faadb476-d78f-3dd5-8273-3ec9cf127239",
           "identifier" : "d175da35-3771-31ca-b2c7-ce7a34e53132",
-          "instanceIdentifier" : "1d1411f0-2030-35f1-1ccf-4b442948c563",
+          "instanceIdentifier" : "54f4408a-ac14-3026-5265-9e466dece140",
           "maxBackoffPeriod" : "10 mins",
           "name" : "ExecuteSQLRecord",
           "penaltyDuration" : "30 sec",
@@ -747,9 +747,9 @@
           "componentType" : "PROCESSOR",
           "concurrentlySchedulableTaskCount" : 1,
           "executionNode" : "ALL",
-          "groupIdentifier" : "219c919c-e828-3700-8ac9-ade825b87e83",
+          "groupIdentifier" : "faadb476-d78f-3dd5-8273-3ec9cf127239",
           "identifier" : "677c3af5-7eae-3e0c-a2e8-e01babc9958f",
-          "instanceIdentifier" : "470069a1-6d64-3f69-61e1-5951dc2d94b9",
+          "instanceIdentifier" : "49ea0d51-f45d-3f4f-e293-9e37a7feef04",
           "maxBackoffPeriod" : "10 mins",
           "name" : "SplitText",
           "penaltyDuration" : "30 sec",

@@ -4,8 +4,9 @@ flows:
       Processing Pipeline, flowDesc: 'Chapter 3: CSV Processing Pipeline. Reads in
       existing.CSV file you created in Python. It will run a query for people over
       the age of 40, then write out that record to a file.'}
-  ce80511b-1197-4c09-9e40-bf4d6913fe48: {ver: 1, file: From_PostgreSQL_to_Elasticsearch.snapshot,
-    comments: First Commit, author: anonymous, created: 1738242110414, flowName: From
+  ce80511b-1197-4c09-9e40-bf4d6913fe48: {ver: 2, file: From_PostgreSQL_to_Elasticsearch.snapshot,
+    comments: 'Chapter 10: Using variable NiFi Regirty. Using local variables for
+      Elasticsearch URL and Index.', author: anonymous, created: 1738592238136, flowName: From
       PostgreSQL to Elasticsearch, flowDesc: 'Chapter 4: From PostgreSQL to Elasticsearch.
       Extract data from PostgreSQL and load it to an Elasticsearch index.'}
   33a1fd12-ae20-4d5d-8d3b-0ce3228cfde8: {ver: 1, file: Modular_Pipeline_with_Processor_Groups.snapshot,
