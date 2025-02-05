@@ -1,0 +1,7 @@
+flows:
+  dace71be-ef31-4659-9944-6df7f0aa0ec6: {ver: 1, file: ReadDataLake.snapshot, comments: Initial
+      version of ReadDataLake processor group., author: anonymous, created: 1738761402181,
+    flowName: ReadDataLake, flowDesc: Reads files from the data lake and extracts
+      JSON fields. Also counts the number of files extracted.}
+layoutVer: 1
+bucketId: d53c79cb-311e-46f6-b1e5-5dec8342e770
