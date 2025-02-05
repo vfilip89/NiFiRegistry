@@ -1,0 +1,393 @@
+{
+  "header" : {
+    "dataModelVersion" : "3"
+  },
+  "content" : {
+    "flowSnapshot" : {
+      "externalControllerServices" : { },
+      "flowContents" : {
+        "comments" : "",
+        "componentType" : "PROCESS_GROUP",
+        "connections" : [ {
+          "backPressureDataSizeThreshold" : "1 GB",
+          "backPressureObjectThreshold" : 10000,
+          "bends" : [ ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "comments" : "",
+            "groupId" : "7ec30718-850e-3b2b-87f9-01498921ddf5",
+            "id" : "21b40cba-2488-304b-8317-6fb41ced2dd4",
+            "instanceIdentifier" : "d6619c5c-0194-1000-8d3f-dbc990144b97",
+            "name" : "UpdateCounter",
+            "type" : "PROCESSOR"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "7ec30718-850e-3b2b-87f9-01498921ddf5",
+          "identifier" : "9b0846f7-3c2d-3a14-b93f-d7d0478fb556",
+          "instanceIdentifier" : "d661c873-0194-1000-e31c-86c6630ddd41",
+          "labelIndex" : 1,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "partitioningAttribute" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "matched" ],
+          "source" : {
+            "comments" : "",
+            "groupId" : "7ec30718-850e-3b2b-87f9-01498921ddf5",
+            "id" : "02223fa1-6deb-35ce-b1e2-fbf7788cc37f",
+            "instanceIdentifier" : "d64afcb5-0194-1000-1c88-a636a22c1dce",
+            "name" : "ScanContent",
+            "type" : "PROCESSOR"
+          },
+          "zIndex" : 0
+        }, {
+          "backPressureDataSizeThreshold" : "1 GB",
+          "backPressureObjectThreshold" : 10000,
+          "bends" : [ ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "comments" : "",
+            "groupId" : "7ec30718-850e-3b2b-87f9-01498921ddf5",
+            "id" : "5398f62d-b0ee-33d2-8344-ee00542c23d4",
+            "instanceIdentifier" : "d65a82aa-0194-1000-f812-939911da2b28",
+            "name" : "PutSlack",
+            "type" : "PROCESSOR"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "7ec30718-850e-3b2b-87f9-01498921ddf5",
+          "identifier" : "5069762c-b03b-3d4e-a150-a43f30dc3d2b",
+          "instanceIdentifier" : "d661d583-0194-1000-ce7a-e4374c8ad28b",
+          "labelIndex" : 1,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "partitioningAttribute" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "success" ],
+          "source" : {
+            "comments" : "",
+            "groupId" : "7ec30718-850e-3b2b-87f9-01498921ddf5",
+            "id" : "21b40cba-2488-304b-8317-6fb41ced2dd4",
+            "instanceIdentifier" : "d6619c5c-0194-1000-8d3f-dbc990144b97",
+            "name" : "UpdateCounter",
+            "type" : "PROCESSOR"
+          },
+          "zIndex" : 0
+        }, {
+          "backPressureDataSizeThreshold" : "1 GB",
+          "backPressureObjectThreshold" : 10000,
+          "bends" : [ ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "comments" : "",
+            "groupId" : "7ec30718-850e-3b2b-87f9-01498921ddf5",
+            "id" : "02223fa1-6deb-35ce-b1e2-fbf7788cc37f",
+            "instanceIdentifier" : "d64afcb5-0194-1000-1c88-a636a22c1dce",
+            "name" : "ScanContent",
+            "type" : "PROCESSOR"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "7ec30718-850e-3b2b-87f9-01498921ddf5",
+          "identifier" : "112f2ac5-b4d0-33ac-b496-5e0345bdfda3",
+          "instanceIdentifier" : "d64b2b54-0194-1000-0a38-6fe4a30c5374",
+          "labelIndex" : 1,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "partitioningAttribute" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "" ],
+          "source" : {
+            "groupId" : "7ec30718-850e-3b2b-87f9-01498921ddf5",
+            "id" : "708e5279-2f45-38cf-989d-534756684351",
+            "instanceIdentifier" : "d64a2e2c-0194-1000-e189-3d8a02c4f008",
+            "name" : "InputDataLake",
+            "type" : "INPUT_PORT"
+          },
+          "zIndex" : 0
+        }, {
+          "backPressureDataSizeThreshold" : "1 GB",
+          "backPressureObjectThreshold" : 10000,
+          "bends" : [ ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "groupId" : "7ec30718-850e-3b2b-87f9-01498921ddf5",
+            "id" : "06257111-4fbd-3242-87fe-4f8407dd96d1",
+            "instanceIdentifier" : "d660140c-0194-1000-3d65-706efebc245b",
+            "name" : "OutputScanned",
+            "type" : "OUTPUT_PORT"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "7ec30718-850e-3b2b-87f9-01498921ddf5",
+          "identifier" : "c3ed8c1e-8c0e-36d4-a6b8-a924baddc07e",
+          "instanceIdentifier" : "d660350b-0194-1000-6fe0-eae7cbca40cd",
+          "labelIndex" : 1,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "partitioningAttribute" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "matched", "unmatched" ],
+          "source" : {
+            "comments" : "",
+            "groupId" : "7ec30718-850e-3b2b-87f9-01498921ddf5",
+            "id" : "02223fa1-6deb-35ce-b1e2-fbf7788cc37f",
+            "instanceIdentifier" : "d64afcb5-0194-1000-1c88-a636a22c1dce",
+            "name" : "ScanContent",
+            "type" : "PROCESSOR"
+          },
+          "zIndex" : 0
+        } ],
+        "controllerServices" : [ ],
+        "defaultBackPressureDataSizeThreshold" : "1 GB",
+        "defaultBackPressureObjectThreshold" : 10000,
+        "defaultFlowFileExpiration" : "0 sec",
+        "flowFileConcurrency" : "UNBOUNDED",
+        "flowFileOutboundPolicy" : "STREAM_WHEN_AVAILABLE",
+        "funnels" : [ ],
+        "identifier" : "7ec30718-850e-3b2b-87f9-01498921ddf5",
+        "inputPorts" : [ {
+          "allowRemoteAccess" : false,
+          "componentType" : "INPUT_PORT",
+          "concurrentlySchedulableTaskCount" : 1,
+          "groupIdentifier" : "7ec30718-850e-3b2b-87f9-01498921ddf5",
+          "identifier" : "708e5279-2f45-38cf-989d-534756684351",
+          "instanceIdentifier" : "d64a2e2c-0194-1000-e189-3d8a02c4f008",
+          "name" : "InputDataLake",
+          "position" : {
+            "x" : -2736.0,
+            "y" : -1448.0
+          },
+          "scheduledState" : "ENABLED",
+          "type" : "INPUT_PORT"
+        } ],
+        "instanceIdentifier" : "d64989d7-0194-1000-6cd4-18f8d8baa72c",
+        "labels" : [ ],
+        "name" : "ScanLake",
+        "outputPorts" : [ {
+          "allowRemoteAccess" : false,
+          "componentType" : "OUTPUT_PORT",
+          "concurrentlySchedulableTaskCount" : 1,
+          "groupIdentifier" : "7ec30718-850e-3b2b-87f9-01498921ddf5",
+          "identifier" : "06257111-4fbd-3242-87fe-4f8407dd96d1",
+          "instanceIdentifier" : "d660140c-0194-1000-3d65-706efebc245b",
+          "name" : "OutputScanned",
+          "position" : {
+            "x" : -2264.0,
+            "y" : -1064.0
+          },
+          "scheduledState" : "ENABLED",
+          "type" : "OUTPUT_PORT"
+        } ],
+        "position" : {
+          "x" : -2368.0,
+          "y" : -1264.0
+        },
+        "processGroups" : [ ],
+        "processors" : [ {
+          "autoTerminatedRelationships" : [ ],
+          "backoffMechanism" : "PENALIZE_FLOWFILE",
+          "bulletinLevel" : "WARN",
+          "bundle" : {
+            "artifact" : "nifi-standard-nar",
+            "group" : "org.apache.nifi",
+            "version" : "1.28.1"
+          },
+          "comments" : "",
+          "componentType" : "PROCESSOR",
+          "concurrentlySchedulableTaskCount" : 1,
+          "executionNode" : "ALL",
+          "groupIdentifier" : "7ec30718-850e-3b2b-87f9-01498921ddf5",
+          "identifier" : "02223fa1-6deb-35ce-b1e2-fbf7788cc37f",
+          "instanceIdentifier" : "d64afcb5-0194-1000-1c88-a636a22c1dce",
+          "maxBackoffPeriod" : "10 mins",
+          "name" : "ScanContent",
+          "penaltyDuration" : "30 sec",
+          "position" : {
+            "x" : -2752.0,
+            "y" : -1272.0
+          },
+          "properties" : {
+            "Dictionary Encoding" : "text",
+            "Dictionary File" : "/home/vfilip/Documents/data_engineering/Programming4DataEngineering/CrickarDataEngPython/chapter_11/data.txt"
+          },
+          "propertyDescriptors" : {
+            "Dictionary Encoding" : {
+              "displayName" : "Dictionary Encoding",
+              "dynamic" : false,
+              "identifiesControllerService" : false,
+              "name" : "Dictionary Encoding",
+              "sensitive" : false
+            },
+            "Dictionary File" : {
+              "displayName" : "Dictionary File",
+              "dynamic" : false,
+              "identifiesControllerService" : false,
+              "name" : "Dictionary File",
+              "resourceDefinition" : {
+                "cardinality" : "SINGLE",
+                "resourceTypes" : [ "FILE" ]
+              },
+              "sensitive" : false
+            }
+          },
+          "retriedRelationships" : [ ],
+          "retryCount" : 10,
+          "runDurationMillis" : 0,
+          "scheduledState" : "ENABLED",
+          "schedulingPeriod" : "0 sec",
+          "schedulingStrategy" : "TIMER_DRIVEN",
+          "style" : { },
+          "type" : "org.apache.nifi.processors.standard.ScanContent",
+          "yieldDuration" : "1 sec"
+        }, {
+          "autoTerminatedRelationships" : [ "success", "failure" ],
+          "backoffMechanism" : "PENALIZE_FLOWFILE",
+          "bulletinLevel" : "WARN",
+          "bundle" : {
+            "artifact" : "nifi-slack-nar",
+            "group" : "org.apache.nifi",
+            "version" : "1.28.1"
+          },
+          "comments" : "",
+          "componentType" : "PROCESSOR",
+          "concurrentlySchedulableTaskCount" : 1,
+          "executionNode" : "ALL",
+          "groupIdentifier" : "7ec30718-850e-3b2b-87f9-01498921ddf5",
+          "identifier" : "5398f62d-b0ee-33d2-8344-ee00542c23d4",
+          "instanceIdentifier" : "d65a82aa-0194-1000-f812-939911da2b28",
+          "maxBackoffPeriod" : "10 mins",
+          "name" : "PutSlack",
+          "penaltyDuration" : "30 sec",
+          "position" : {
+            "x" : -2744.0,
+            "y" : -760.0
+          },
+          "properties" : {
+            "icon-emoji" : ":robot_face:",
+            "webhook-text" : "Alert: VIP customer detected in Data Lake - ${name}",
+            "channel" : "#studying-data-engineering",
+            "username" : "NiFi Bot"
+          },
+          "propertyDescriptors" : {
+            "icon-emoji" : {
+              "displayName" : "Icon Emoji",
+              "dynamic" : false,
+              "identifiesControllerService" : false,
+              "name" : "icon-emoji",
+              "sensitive" : false
+            },
+            "SSL Context Service" : {
+              "displayName" : "SSL Context Service",
+              "dynamic" : false,
+              "identifiesControllerService" : true,
+              "name" : "SSL Context Service",
+              "sensitive" : false
+            },
+            "webhook-url" : {
+              "displayName" : "Webhook URL",
+              "dynamic" : false,
+              "identifiesControllerService" : false,
+              "name" : "webhook-url",
+              "sensitive" : true
+            },
+            "webhook-text" : {
+              "displayName" : "Webhook Text",
+              "dynamic" : false,
+              "identifiesControllerService" : false,
+              "name" : "webhook-text",
+              "sensitive" : false
+            },
+            "channel" : {
+              "displayName" : "Channel",
+              "dynamic" : false,
+              "identifiesControllerService" : false,
+              "name" : "channel",
+              "sensitive" : false
+            },
+            "icon-url" : {
+              "displayName" : "Icon URL",
+              "dynamic" : false,
+              "identifiesControllerService" : false,
+              "name" : "icon-url",
+              "sensitive" : false
+            },
+            "username" : {
+              "displayName" : "Username",
+              "dynamic" : false,
+              "identifiesControllerService" : false,
+              "name" : "username",
+              "sensitive" : false
+            }
+          },
+          "retriedRelationships" : [ ],
+          "retryCount" : 10,
+          "runDurationMillis" : 0,
+          "scheduledState" : "ENABLED",
+          "schedulingPeriod" : "0 sec",
+          "schedulingStrategy" : "TIMER_DRIVEN",
+          "style" : { },
+          "type" : "org.apache.nifi.processors.slack.PutSlack",
+          "yieldDuration" : "1 sec"
+        }, {
+          "autoTerminatedRelationships" : [ ],
+          "backoffMechanism" : "PENALIZE_FLOWFILE",
+          "bulletinLevel" : "WARN",
+          "bundle" : {
+            "artifact" : "nifi-standard-nar",
+            "group" : "org.apache.nifi",
+            "version" : "1.28.1"
+          },
+          "comments" : "",
+          "componentType" : "PROCESSOR",
+          "concurrentlySchedulableTaskCount" : 1,
+          "executionNode" : "ALL",
+          "groupIdentifier" : "7ec30718-850e-3b2b-87f9-01498921ddf5",
+          "identifier" : "21b40cba-2488-304b-8317-6fb41ced2dd4",
+          "instanceIdentifier" : "d6619c5c-0194-1000-8d3f-dbc990144b97",
+          "maxBackoffPeriod" : "10 mins",
+          "name" : "UpdateCounter",
+          "penaltyDuration" : "30 sec",
+          "position" : {
+            "x" : -2744.0,
+            "y" : -992.0
+          },
+          "properties" : {
+            "counter-name" : "VIPcustomerOccurences",
+            "delta" : "1"
+          },
+          "propertyDescriptors" : {
+            "counter-name" : {
+              "displayName" : "Counter Name",
+              "dynamic" : false,
+              "identifiesControllerService" : false,
+              "name" : "counter-name",
+              "sensitive" : false
+            },
+            "delta" : {
+              "displayName" : "Delta",
+              "dynamic" : false,
+              "identifiesControllerService" : false,
+              "name" : "delta",
+              "sensitive" : false
+            }
+          },
+          "retriedRelationships" : [ ],
+          "retryCount" : 10,
+          "runDurationMillis" : 0,
+          "scheduledState" : "ENABLED",
+          "schedulingPeriod" : "0 sec",
+          "schedulingStrategy" : "TIMER_DRIVEN",
+          "style" : { },
+          "type" : "org.apache.nifi.processors.standard.UpdateCounter",
+          "yieldDuration" : "1 sec"
+        } ],
+        "remoteProcessGroups" : [ ]
+      },
+      "flowEncodingVersion" : "1.0",
+      "parameterContexts" : { },
+      "parameterProviders" : { }
+    }
+  }
+}

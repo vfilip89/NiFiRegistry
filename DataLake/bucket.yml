@@ -3,5 +3,10 @@ flows:
       version of ReadDataLake processor group., author: anonymous, created: 1738761402181,
     flowName: ReadDataLake, flowDesc: Reads files from the data lake and extracts
       JSON fields. Also counts the number of files extracted.}
+  d57f0422-c17c-4f6e-b7b0-af603bdef896: {ver: 1, file: ScanContent.snapshot, comments: 'Initial
+      version of ScanContent processor group. ', author: anonymous, created: 1738763767105,
+    flowName: ScanContent, flowDesc: 'Looks at fields in the flowfile content and
+      compare them to a dictionary file – a file with content on each line that you
+      are looking for. Also counts the occurrences. '}
 layoutVer: 1
 bucketId: d53c79cb-311e-46f6-b1e5-5dec8342e770
