@@ -10,10 +10,6 @@ flows:
     created: 1738596700801, flowName: From PostgreSQL to Elasticsearch, flowDesc: 'Chapter
       4: From PostgreSQL to Elasticsearch. Extract data from PostgreSQL and load it
       to an Elasticsearch index.'}
-  d9933aee-7a32-4d60-83fe-23c58059dd2d: {ver: 1, file: InsertStaging.snapshot, comments: ' Initial
-      version of InsertStaging processor group. ', author: anonymous, created: 1738771168588,
-    flowName: InsertStaging, flowDesc: Uses a PutSQL processor to upsert data at a
-      staging database. Also counts the data upserted.}
   33a1fd12-ae20-4d5d-8d3b-0ce3228cfde8: {ver: 1, file: Modular_Pipeline_with_Processor_Groups.snapshot,
     comments: First Commit, author: anonymous, created: 1738590585133, flowName: Modular
       Pipeline with Processor Groups, flowDesc: 'Chapter 10: Successfully connects
