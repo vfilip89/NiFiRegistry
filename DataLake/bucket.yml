@@ -1,0 +1,7 @@
+flows:
+  ae437cd0-d0f8-4672-bc48-f58a7b228255: {ver: 1, file: ReadDataLake.snapshot, comments: First
+      Commit, author: anonymous, created: 1738760883900, flowName: ReadDataLake, flowDesc: 'Chapter
+      11: Reading the data lake. This processor group will consist of three processors
+      – GetFile, EvaluateJsonPath, and UpdateCounter – and an output port.'}
+layoutVer: 1
+bucketId: d53c79cb-311e-46f6-b1e5-5dec8342e770
