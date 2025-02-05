@@ -134,7 +134,7 @@
             "dbcp-min-evictable-idle-time" : "30 mins",
             "Max Total Connections" : "8",
             "dbcp-max-conn-lifetime" : "-1",
-            "Database Connection URL" : "jdbc:postgresql://localhost/test",
+            "Database Connection URL" : "jdbc:postgresql://localhost/${database}",
             "dbcp-time-between-eviction-runs" : "-1",
             "Database User" : "postgres",
             "dbcp-soft-min-evictable-idle-time" : "-1",
