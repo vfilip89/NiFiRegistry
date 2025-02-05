@@ -99,10 +99,11 @@
           "prioritizers" : [ ],
           "selectedRelationships" : [ "" ],
           "source" : {
+            "comments" : "",
             "groupId" : "7ec30718-850e-3b2b-87f9-01498921ddf5",
             "id" : "708e5279-2f45-38cf-989d-534756684351",
             "instanceIdentifier" : "d64a2e2c-0194-1000-e189-3d8a02c4f008",
-            "name" : "InputDataLake",
+            "name" : "InputScanning",
             "type" : "INPUT_PORT"
           },
           "zIndex" : 0
@@ -149,12 +150,13 @@
         "identifier" : "7ec30718-850e-3b2b-87f9-01498921ddf5",
         "inputPorts" : [ {
           "allowRemoteAccess" : false,
+          "comments" : "",
           "componentType" : "INPUT_PORT",
           "concurrentlySchedulableTaskCount" : 1,
           "groupIdentifier" : "7ec30718-850e-3b2b-87f9-01498921ddf5",
           "identifier" : "708e5279-2f45-38cf-989d-534756684351",
           "instanceIdentifier" : "d64a2e2c-0194-1000-e189-3d8a02c4f008",
-          "name" : "InputDataLake",
+          "name" : "InputScanning",
           "position" : {
             "x" : -2736.0,
             "y" : -1448.0
