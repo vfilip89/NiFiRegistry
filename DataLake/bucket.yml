@@ -1,6 +1,6 @@
 flows:
-  dace71be-ef31-4659-9944-6df7f0aa0ec6: {ver: 1, file: ReadDataLake.snapshot, comments: Initial
-      version of ReadDataLake processor group., author: anonymous, created: 1738761402181,
+  dace71be-ef31-4659-9944-6df7f0aa0ec6: {ver: 2, file: ReadDataLake.snapshot, comments: Modified
+      batch size to read 1000 files if ran once., author: anonymous, created: 1738769831261,
     flowName: ReadDataLake, flowDesc: Reads files from the data lake and extracts
       JSON fields. Also counts the number of files extracted.}
   d57f0422-c17c-4f6e-b7b0-af603bdef896: {ver: 2, file: ScanContent.snapshot, comments: Changed
