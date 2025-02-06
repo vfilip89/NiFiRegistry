@@ -8,9 +8,9 @@ flows:
     flowDesc: 'Looks at fields in the flowfile content and compare them to a dictionary
       file – a file with content on each line that you are looking for. Also counts
       the occurrences. '}
-  1802d7bf-2eb0-48f6-afb7-1585f7889270: {ver: 2, file: InsertStaging.snapshot, comments: Variables
-      are now used for both database (test or production) and table (staging or warehouse).,
-    author: anonymous, created: 1738772575109, flowName: InsertStaging, flowDesc: Uses
+  1802d7bf-2eb0-48f6-afb7-1585f7889270: {ver: 3, file: InsertStaging.snapshot, comments: 'Variables
+      are now used for both database (test or production) and table (staging or warehouse). ',
+    author: anonymous, created: 1738837290017, flowName: InsertStaging, flowDesc: Uses
       a PutSQL processor to upsert data at a staging database. Also counts the data
       upserted.}
 layoutVer: 1
