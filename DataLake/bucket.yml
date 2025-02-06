@@ -20,10 +20,12 @@ flows:
     flowDesc: |-
       Validates data in staging using a Great Expectations validation suite named staging.validation. EvaluateJsonPath and RouteOnAttribute processors check the result attribute to see whether it matches pass. If so,
       the processor sends the flowfile to an output port.
-  dace71be-ef31-4659-9944-6df7f0aa0ec6: {ver: 2, file: ReadDataLake.snapshot, comments: Modified
-      batch size to read 1000 files if ran once., author: anonymous, created: 1738769831261,
-    flowName: ReadDataLake, flowDesc: Reads files from the data lake and extracts
-      JSON fields. Also counts the number of files extracted.}
+  dace71be-ef31-4659-9944-6df7f0aa0ec6: {ver: 3, file: ReadDataLake.snapshot, comments: 'GetFile
+      changes: do not keep source files, scheduling 1 sec and batchsize 10 files.
+      In order to not execute more than 10 unnecessary validations and uploads to
+      warehouse.', author: anonymous, created: 1738862243171, flowName: ReadDataLake,
+    flowDesc: Reads files from the data lake and extracts JSON fields. Also counts
+      the number of files extracted.}
   d57f0422-c17c-4f6e-b7b0-af603bdef896: {ver: 2, file: ScanContent.snapshot, comments: Changed
       the name of input port., author: anonymous, created: 1738769171845, flowName: ScanContent,
     flowDesc: 'Looks at fields in the flowfile content and compare them to a dictionary
