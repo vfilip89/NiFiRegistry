@@ -8,6 +8,10 @@ flows:
     flowDesc: 'Looks at fields in the flowfile content and compare them to a dictionary
       file – a file with content on each line that you are looking for. Also counts
       the occurrences. '}
+  eca536d9-57e5-434d-bf29-1f9e03f8a996: {ver: 1, file: QueryStaging.snapshot, comments: First
+      Commit, author: anonymous, created: 1738844509857, flowName: QueryStaging, flowDesc: Uses
+      an ExecuteSQLRecord processor to perform a select count query to a staging database.
+      Counts the data upserted and creates an attribute recordcount.}
   1802d7bf-2eb0-48f6-afb7-1585f7889270: {ver: 3, file: InsertStaging.snapshot, comments: 'Variables
       are now used for both database (test or production) and table (staging or warehouse). ',
     author: anonymous, created: 1738837290017, flowName: InsertStaging, flowDesc: Uses
