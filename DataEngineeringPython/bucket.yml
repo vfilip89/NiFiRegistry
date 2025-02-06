@@ -16,14 +16,6 @@ flows:
       4 processor groups using 3 input ports and a funnel and an output port. Generates
       JSON data from 3 similar modularized sources. Each source with different content.
       Updates filenames from content and writes them the to disk.'}
-  82163e1c-86ea-4013-bcea-504a302ac846: {ver: 1, file: InsertWarehouse.snapshot, comments: ' Initial
-      version of InsertWarehouse processor group. ', author: anonymous, created: 1738857531312,
-    flowName: InsertWarehouse, flowDesc: 'Uses an ExecuteSQLRecord and a PutSQL processor.
-      ExecuteSQLProcessor performs a select operation on the staging table to retrieve
-      data. Then the pipeline sends the output to the SplitText processor, which connects
-      to the EvalueJsonPath processor, which is a direct copy of the one from the
-      ReadDataLake processor group that connects to the final PutSQL processor that
-      loads data to the warehouse.'}
   6ff807a8-68ab-4ea3-b1fa-48a0f043f9e5: {ver: 2, file: Great_Expectations_in_NiFi.snapshot,
     comments: In the previous version a wrong processor group was saved. In current
       version the correct processor group is saved., author: anonymous, created: 1738240893650,
