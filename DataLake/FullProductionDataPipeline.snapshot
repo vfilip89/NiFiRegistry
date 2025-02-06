@@ -211,8 +211,8 @@
           "versionedFlowCoordinates" : {
             "bucketId" : "d53c79cb-311e-46f6-b1e5-5dec8342e770",
             "flowId" : "eca536d9-57e5-434d-bf29-1f9e03f8a996",
-            "storageLocation" : "http://localhost:18080/nifi-registry-api/buckets/d53c79cb-311e-46f6-b1e5-5dec8342e770/flows/eca536d9-57e5-434d-bf29-1f9e03f8a996/versions/2",
-            "version" : "2"
+            "storageLocation" : "http://localhost:18080/nifi-registry-api/buckets/d53c79cb-311e-46f6-b1e5-5dec8342e770/flows/eca536d9-57e5-434d-bf29-1f9e03f8a996/versions/3",
+            "version" : "3"
           }
         }, {
           "comments" : "",
@@ -304,8 +304,8 @@
           "versionedFlowCoordinates" : {
             "bucketId" : "d53c79cb-311e-46f6-b1e5-5dec8342e770",
             "flowId" : "dace71be-ef31-4659-9944-6df7f0aa0ec6",
-            "storageLocation" : "http://localhost:18080/nifi-registry-api/buckets/d53c79cb-311e-46f6-b1e5-5dec8342e770/flows/dace71be-ef31-4659-9944-6df7f0aa0ec6/versions/2",
-            "version" : "2"
+            "storageLocation" : "http://localhost:18080/nifi-registry-api/buckets/d53c79cb-311e-46f6-b1e5-5dec8342e770/flows/dace71be-ef31-4659-9944-6df7f0aa0ec6/versions/3",
+            "version" : "3"
           }
         }, {
           "comments" : "",

@@ -1,6 +1,7 @@
 flows:
-  189bd39b-1aa7-4d11-a0c0-be81efae3f25: {ver: 1, file: FullProductionDataPipeline.snapshot,
-    comments: First Commit., author: anonymous, created: 1738857761417, flowName: FullProductionDataPipeline,
+  189bd39b-1aa7-4d11-a0c0-be81efae3f25: {ver: 2, file: FullProductionDataPipeline.snapshot,
+    comments: Changes at GetFile and at counting less than 1000 loads to staging.,
+    author: anonymous, created: 1738862348493, flowName: FullProductionDataPipeline,
     flowDesc: Crickard Chapter 11 Building a Production Data Pipeline. Full Pipeline.}
   74085b2b-9e02-4ed5-9d30-2b84dc797715: {ver: 1, file: InsertWarehouse.snapshot, comments: 'Initial
       version of InsertWarehouse processor group. ', author: anonymous, created: 1738857604733,
