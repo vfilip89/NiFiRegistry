@@ -130,7 +130,7 @@
           "properties" : {
             "dbcp-min-idle-conns" : "0",
             "Max Wait Time" : "500 millis",
-            "Database Driver Class Name" : "org.postgresql.Driver",
+            "Database Driver Class Name" : "${DatabaseDriverClassName}",
             "dbcp-min-evictable-idle-time" : "30 mins",
             "Max Total Connections" : "8",
             "dbcp-max-conn-lifetime" : "-1",
@@ -138,7 +138,7 @@
             "dbcp-time-between-eviction-runs" : "-1",
             "Database User" : "postgres",
             "dbcp-soft-min-evictable-idle-time" : "-1",
-            "database-driver-locations" : "/home/vfilip/nifi/nifi-1.28.1/drivers/postgresql-42.7.4.jar",
+            "database-driver-locations" : "${DatabaseDriverLocation}",
             "dbcp-max-idle-conns" : "8"
           },
           "propertyDescriptors" : {

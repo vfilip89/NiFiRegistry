@@ -12,10 +12,9 @@ flows:
       Commit, author: anonymous, created: 1738844509857, flowName: QueryStaging, flowDesc: Uses
       an ExecuteSQLRecord processor to perform a select count query to a staging database.
       Counts the data upserted and creates an attribute recordcount.}
-  1802d7bf-2eb0-48f6-afb7-1585f7889270: {ver: 3, file: InsertStaging.snapshot, comments: 'Variables
-      are now used for both database (test or production) and table (staging or warehouse). ',
-    author: anonymous, created: 1738837290017, flowName: InsertStaging, flowDesc: Uses
-      a PutSQL processor to upsert data at a staging database. Also counts the data
-      upserted.}
+  1802d7bf-2eb0-48f6-afb7-1585f7889270: {ver: 4, file: InsertStaging.snapshot, comments: Using
+      variables and not parameters properly., author: anonymous, created: 1738844539331,
+    flowName: InsertStaging, flowDesc: Uses a PutSQL processor to upsert data at a
+      staging database. Also counts the data upserted.}
 layoutVer: 1
 bucketId: d53c79cb-311e-46f6-b1e5-5dec8342e770
