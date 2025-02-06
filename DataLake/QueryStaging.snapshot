@@ -46,6 +46,38 @@
           "bends" : [ ],
           "componentType" : "CONNECTION",
           "destination" : {
+            "groupId" : "0cf3c1b5-9099-35d6-8c83-2d758ea47406",
+            "id" : "df678296-559c-3cb5-8be8-e5b3618bec3f",
+            "instanceIdentifier" : "db39e4f1-0194-1000-1d0e-9574fe8dde00",
+            "name" : "OutputQueryStaging",
+            "type" : "OUTPUT_PORT"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "0cf3c1b5-9099-35d6-8c83-2d758ea47406",
+          "identifier" : "53a6346a-aee2-3985-b004-d12cb76dd442",
+          "instanceIdentifier" : "db3a9b2f-0194-1000-dc3c-01102ea7d89b",
+          "labelIndex" : 1,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "partitioningAttribute" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "allrecords" ],
+          "source" : {
+            "comments" : "",
+            "groupId" : "0cf3c1b5-9099-35d6-8c83-2d758ea47406",
+            "id" : "230943b5-801a-35bd-bdea-944d8f36b027",
+            "instanceIdentifier" : "db37821e-0194-1000-7767-6331e0ec1e23",
+            "name" : "RouteOnAttribute",
+            "type" : "PROCESSOR"
+          },
+          "zIndex" : 0
+        }, {
+          "backPressureDataSizeThreshold" : "1 GB",
+          "backPressureObjectThreshold" : 10000,
+          "bends" : [ ],
+          "componentType" : "CONNECTION",
+          "destination" : {
             "comments" : "",
             "groupId" : "0cf3c1b5-9099-35d6-8c83-2d758ea47406",
             "id" : "adfcf228-9d9f-3aab-a76c-b6faf7b2c7bd",
@@ -70,6 +102,39 @@
             "id" : "c2445318-8543-3d10-b21c-9151e44f8973",
             "instanceIdentifier" : "dace195a-0194-1000-be09-c491525dac27",
             "name" : "Query Staging Count",
+            "type" : "PROCESSOR"
+          },
+          "zIndex" : 0
+        }, {
+          "backPressureDataSizeThreshold" : "1 GB",
+          "backPressureObjectThreshold" : 10000,
+          "bends" : [ ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "comments" : "",
+            "groupId" : "0cf3c1b5-9099-35d6-8c83-2d758ea47406",
+            "id" : "230943b5-801a-35bd-bdea-944d8f36b027",
+            "instanceIdentifier" : "db37821e-0194-1000-7767-6331e0ec1e23",
+            "name" : "RouteOnAttribute",
+            "type" : "PROCESSOR"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "0cf3c1b5-9099-35d6-8c83-2d758ea47406",
+          "identifier" : "2e413230-431e-3bec-b98e-af38200ae8d2",
+          "instanceIdentifier" : "db37a6f8-0194-1000-bffa-9057c1830e4b",
+          "labelIndex" : 1,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "partitioningAttribute" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "matched" ],
+          "source" : {
+            "comments" : "",
+            "groupId" : "0cf3c1b5-9099-35d6-8c83-2d758ea47406",
+            "id" : "adfcf228-9d9f-3aab-a76c-b6faf7b2c7bd",
+            "instanceIdentifier" : "db29e59b-0194-1000-cf42-4568e50c0d18",
+            "name" : "EvaluateJsonPath",
             "type" : "PROCESSOR"
           },
           "zIndex" : 0
@@ -433,14 +498,28 @@
         "instanceIdentifier" : "daca96bf-0194-1000-c988-9f0adc7c42a5",
         "labels" : [ ],
         "name" : "QueryStaging",
-        "outputPorts" : [ ],
+        "outputPorts" : [ {
+          "allowRemoteAccess" : false,
+          "componentType" : "OUTPUT_PORT",
+          "concurrentlySchedulableTaskCount" : 1,
+          "groupIdentifier" : "0cf3c1b5-9099-35d6-8c83-2d758ea47406",
+          "identifier" : "df678296-559c-3cb5-8be8-e5b3618bec3f",
+          "instanceIdentifier" : "db39e4f1-0194-1000-1d0e-9574fe8dde00",
+          "name" : "OutputQueryStaging",
+          "position" : {
+            "x" : -3048.0,
+            "y" : -696.0
+          },
+          "scheduledState" : "ENABLED",
+          "type" : "OUTPUT_PORT"
+        } ],
         "position" : {
           "x" : -3000.0,
           "y" : -960.0
         },
         "processGroups" : [ ],
         "processors" : [ {
-          "autoTerminatedRelationships" : [ "failure", "matched", "unmatched" ],
+          "autoTerminatedRelationships" : [ "failure", "unmatched" ],
           "backoffMechanism" : "PENALIZE_FLOWFILE",
           "bulletinLevel" : "WARN",
           "bundle" : {
@@ -668,6 +747,58 @@
           "schedulingStrategy" : "TIMER_DRIVEN",
           "style" : { },
           "type" : "org.apache.nifi.processors.standard.ExecuteSQLRecord",
+          "yieldDuration" : "1 sec"
+        }, {
+          "autoTerminatedRelationships" : [ "unmatched" ],
+          "backoffMechanism" : "PENALIZE_FLOWFILE",
+          "bulletinLevel" : "WARN",
+          "bundle" : {
+            "artifact" : "nifi-standard-nar",
+            "group" : "org.apache.nifi",
+            "version" : "1.28.1"
+          },
+          "comments" : "",
+          "componentType" : "PROCESSOR",
+          "concurrentlySchedulableTaskCount" : 1,
+          "executionNode" : "ALL",
+          "groupIdentifier" : "0cf3c1b5-9099-35d6-8c83-2d758ea47406",
+          "identifier" : "230943b5-801a-35bd-bdea-944d8f36b027",
+          "instanceIdentifier" : "db37821e-0194-1000-7767-6331e0ec1e23",
+          "maxBackoffPeriod" : "10 mins",
+          "name" : "RouteOnAttribute",
+          "penaltyDuration" : "30 sec",
+          "position" : {
+            "x" : -3104.0,
+            "y" : -896.0
+          },
+          "properties" : {
+            "Routing Strategy" : "Route to Property name",
+            "allrecords" : "${recordcount:ge(1000)}"
+          },
+          "propertyDescriptors" : {
+            "Routing Strategy" : {
+              "displayName" : "Routing Strategy",
+              "dynamic" : false,
+              "identifiesControllerService" : false,
+              "name" : "Routing Strategy",
+              "sensitive" : false
+            },
+            "allrecords" : {
+              "displayName" : "allrecords",
+              "dynamic" : false,
+              "identifiesControllerService" : false,
+              "name" : "allrecords",
+              "sensitive" : false
+            }
+          },
+          "retriedRelationships" : [ ],
+          "retryCount" : 10,
+          "runDurationMillis" : 25,
+          "scheduledState" : "ENABLED",
+          "schedulingPeriod" : "0 sec",
+          "schedulingStrategy" : "TIMER_DRIVEN",
+          "style" : { },
+          "type" : "org.apache.nifi.processors.standard.RouteOnAttribute",
           "yieldDuration" : "1 sec"
         } ],
         "remoteProcessGroups" : [ ]
