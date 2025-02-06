@@ -46,6 +46,39 @@
           "bends" : [ ],
           "componentType" : "CONNECTION",
           "destination" : {
+            "comments" : "",
+            "groupId" : "0cf3c1b5-9099-35d6-8c83-2d758ea47406",
+            "id" : "c9d533a9-0b13-36cd-8d58-283a48e4ac3e",
+            "instanceIdentifier" : "32d432c3-c038-1da3-940c-6590ab2a1cc5",
+            "name" : "UpdateCounter",
+            "type" : "PROCESSOR"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "0cf3c1b5-9099-35d6-8c83-2d758ea47406",
+          "identifier" : "abd2af50-0240-3bf2-b6bf-24bcbcc38ea5",
+          "instanceIdentifier" : "32d432c4-c038-1da3-6e8a-0c86dd6080d5",
+          "labelIndex" : 1,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "partitioningAttribute" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "unmatched" ],
+          "source" : {
+            "comments" : "",
+            "groupId" : "0cf3c1b5-9099-35d6-8c83-2d758ea47406",
+            "id" : "230943b5-801a-35bd-bdea-944d8f36b027",
+            "instanceIdentifier" : "db37821e-0194-1000-7767-6331e0ec1e23",
+            "name" : "RouteOnAttribute",
+            "type" : "PROCESSOR"
+          },
+          "zIndex" : 0
+        }, {
+          "backPressureDataSizeThreshold" : "1 GB",
+          "backPressureObjectThreshold" : 10000,
+          "bends" : [ ],
+          "componentType" : "CONNECTION",
+          "destination" : {
             "groupId" : "0cf3c1b5-9099-35d6-8c83-2d758ea47406",
             "id" : "df678296-559c-3cb5-8be8-e5b3618bec3f",
             "instanceIdentifier" : "db39e4f1-0194-1000-1d0e-9574fe8dde00",
@@ -749,7 +782,7 @@
           "type" : "org.apache.nifi.processors.standard.ExecuteSQLRecord",
           "yieldDuration" : "1 sec"
         }, {
-          "autoTerminatedRelationships" : [ "unmatched" ],
+          "autoTerminatedRelationships" : [ ],
           "backoffMechanism" : "PENALIZE_FLOWFILE",
           "bulletinLevel" : "WARN",
           "bundle" : {
@@ -768,7 +801,7 @@
           "name" : "RouteOnAttribute",
           "penaltyDuration" : "30 sec",
           "position" : {
-            "x" : -3104.0,
+            "x" : -3112.0,
             "y" : -896.0
           },
           "properties" : {
@@ -799,6 +832,58 @@
           "schedulingStrategy" : "TIMER_DRIVEN",
           "style" : { },
           "type" : "org.apache.nifi.processors.standard.RouteOnAttribute",
+          "yieldDuration" : "1 sec"
+        }, {
+          "autoTerminatedRelationships" : [ "success" ],
+          "backoffMechanism" : "PENALIZE_FLOWFILE",
+          "bulletinLevel" : "WARN",
+          "bundle" : {
+            "artifact" : "nifi-standard-nar",
+            "group" : "org.apache.nifi",
+            "version" : "1.28.1"
+          },
+          "comments" : "",
+          "componentType" : "PROCESSOR",
+          "concurrentlySchedulableTaskCount" : 1,
+          "executionNode" : "ALL",
+          "groupIdentifier" : "0cf3c1b5-9099-35d6-8c83-2d758ea47406",
+          "identifier" : "c9d533a9-0b13-36cd-8d58-283a48e4ac3e",
+          "instanceIdentifier" : "32d432c3-c038-1da3-940c-6590ab2a1cc5",
+          "maxBackoffPeriod" : "10 mins",
+          "name" : "UpdateCounter",
+          "penaltyDuration" : "30 sec",
+          "position" : {
+            "x" : -2608.0,
+            "y" : -664.0
+          },
+          "properties" : {
+            "counter-name" : "LessThan1000",
+            "delta" : "1"
+          },
+          "propertyDescriptors" : {
+            "counter-name" : {
+              "displayName" : "Counter Name",
+              "dynamic" : false,
+              "identifiesControllerService" : false,
+              "name" : "counter-name",
+              "sensitive" : false
+            },
+            "delta" : {
+              "displayName" : "Delta",
+              "dynamic" : false,
+              "identifiesControllerService" : false,
+              "name" : "delta",
+              "sensitive" : false
+            }
+          },
+          "retriedRelationships" : [ ],
+          "retryCount" : 10,
+          "runDurationMillis" : 0,
+          "scheduledState" : "ENABLED",
+          "schedulingPeriod" : "0 sec",
+          "schedulingStrategy" : "TIMER_DRIVEN",
+          "style" : { },
+          "type" : "org.apache.nifi.processors.standard.UpdateCounter",
           "yieldDuration" : "1 sec"
         } ],
         "remoteProcessGroups" : [ ]
