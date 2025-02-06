@@ -1,4 +1,14 @@
 flows:
+  e2f3d881-db30-42f9-aa02-08a2b3f539a0:
+    ver: 1
+    file: ValidateStaging.snapshot
+    comments: ' Initial version of ValidateStaging processor group. '
+    author: anonymous
+    created: 1738853598221
+    flowName: ValidateStaging
+    flowDesc: |-
+      Validates data in staging using a Great Expectations validation suite named staging.validation. EvaluateJsonPath and RouteOnAttribute processors check the result attribute to see whether it matches pass. If so,
+      the processor sends the flowfile to an output port.
   dace71be-ef31-4659-9944-6df7f0aa0ec6: {ver: 2, file: ReadDataLake.snapshot, comments: Modified
       batch size to read 1000 files if ran once., author: anonymous, created: 1738769831261,
     flowName: ReadDataLake, flowDesc: Reads files from the data lake and extracts
