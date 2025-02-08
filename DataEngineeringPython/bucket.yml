@@ -25,21 +25,6 @@ flows:
       Expectations on the data and reads in the result — the pass or fail JSON from
       the script. Lastly, it extracts the result and routes the flowfile to either
       a pass or fail PutFile processor.'}
-  28029ea8-15db-4fc5-833e-631de7a9c73a:
-    ver: 1
-    file: Production_Data_Pipeline.snapshot
-    comments: First completed commit
-    author: anonymous
-    created: 1739016419515
-    flowName: Production Data Pipeline
-    flowDesc: |-
-      Chapter 10: The data pipeline you build will do the following:
-      • Read files from the data lake.
-      • Insert the files into staging.
-      • Validate the staging data.
-      • Move staging to the warehouse.
-
-      Has variable for deploying purposes to manage TEST AND PROD environments and to manage staging and warehouse dbs.
   65380792-b863-4d1a-bcc4-70580dfccd20: {ver: 1, file: Studying_Backpressure.snapshot,
     comments: First Commit, author: anonymous, created: 1738586437194, flowName: Studying
       Backpressure, flowDesc: 'Chapter 10: Studying Backpressure with a simple flowfile
