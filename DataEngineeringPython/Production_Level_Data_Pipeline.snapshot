@@ -179,9 +179,10 @@
         "logFileSuffix" : "",
         "name" : "CrickardProductionDataPipeline",
         "outputPorts" : [ ],
+        "parameterContextName" : "DataLakeParams",
         "position" : {
-          "x" : -2832.0,
-          "y" : -1088.0
+          "x" : -2840.0,
+          "y" : -1048.0
         },
         "processGroups" : [ {
           "comments" : "",
@@ -374,16 +375,17 @@
             "properties" : {
               "dbcp-min-idle-conns" : "0",
               "Max Wait Time" : "500 millis",
-              "Database Driver Class Name" : "${DatabaseDriverClassName}",
+              "Database Driver Class Name" : "#{DatabaseDriverClassName}",
               "dbcp-min-evictable-idle-time" : "30 mins",
               "Max Total Connections" : "8",
               "dbcp-max-conn-lifetime" : "-1",
-              "Database Connection URL" : "jdbc:postgresql://localhost/${database}",
+              "Database Connection URL" : "jdbc:postgresql://localhost/#{database}",
               "dbcp-time-between-eviction-runs" : "-1",
-              "Database User" : "postgres",
+              "Database User" : "#{postgres_username}",
               "dbcp-soft-min-evictable-idle-time" : "-1",
-              "database-driver-locations" : "${DatabaseDriverLocation}",
-              "dbcp-max-idle-conns" : "8"
+              "database-driver-locations" : "#{DatabaseDriverLocation}",
+              "dbcp-max-idle-conns" : "8",
+              "Password" : "#{postgres_password}"
             },
             "propertyDescriptors" : {
               "kerberos-password" : {
@@ -709,6 +711,7 @@
           } ],
           "instanceIdentifier" : "daca96bf-0194-1000-c988-9f0adc7c42a5",
           "labels" : [ ],
+          "logFileSuffix" : "",
           "name" : "QueryStaging",
           "outputPorts" : [ {
             "allowRemoteAccess" : false,
@@ -725,6 +728,7 @@
             "scheduledState" : "ENABLED",
             "type" : "OUTPUT_PORT"
           } ],
+          "parameterContextName" : "DataLakeParams",
           "position" : {
             "x" : -3000.0,
             "y" : -960.0
@@ -848,7 +852,7 @@
               "dbf-default-scale" : "0",
               "esql-output-batch-size" : "0",
               "esql-fetch-size" : "0",
-              "SQL select query" : "SELECT COUNT(*) AS recordcount FROM ${table};",
+              "SQL select query" : "SELECT COUNT(*) AS recordcount FROM staging;",
               "esqlrecord-normalize" : "false"
             },
             "propertyDescriptors" : {
@@ -1671,16 +1675,17 @@
             "properties" : {
               "dbcp-min-idle-conns" : "0",
               "Max Wait Time" : "500 millis",
-              "Database Driver Class Name" : "${DatabaseDriverClassName}",
+              "Database Driver Class Name" : "#{DatabaseDriverClassName}",
               "dbcp-min-evictable-idle-time" : "30 mins",
               "Max Total Connections" : "8",
               "dbcp-max-conn-lifetime" : "-1",
-              "Database Connection URL" : "jdbc:postgresql://localhost/${database}",
+              "Database Connection URL" : "jdbc:postgresql://localhost/#{database}",
               "dbcp-time-between-eviction-runs" : "-1",
-              "Database User" : "postgres",
+              "Database User" : "#{postgres_username}",
               "dbcp-soft-min-evictable-idle-time" : "-1",
-              "database-driver-locations" : "${DatabaseDriverLocation}",
-              "dbcp-max-idle-conns" : "8"
+              "database-driver-locations" : "#{DatabaseDriverLocation}",
+              "dbcp-max-idle-conns" : "8",
+              "Password" : "#{postgres_password}"
             },
             "propertyDescriptors" : {
               "kerberos-password" : {
@@ -1842,6 +1847,7 @@
           } ],
           "instanceIdentifier" : "d6a0d309-0194-1000-9c33-edc84644a4f2",
           "labels" : [ ],
+          "logFileSuffix" : "",
           "name" : "InsertStaging",
           "outputPorts" : [ {
             "allowRemoteAccess" : false,
@@ -1858,6 +1864,7 @@
             "scheduledState" : "ENABLED",
             "type" : "OUTPUT_PORT"
           } ],
+          "parameterContextName" : "DataLakeParams",
           "position" : {
             "x" : -2360.0,
             "y" : -960.0
@@ -1888,7 +1895,7 @@
             },
             "properties" : {
               "Support Fragmented Transactions" : "false",
-              "putsql-sql-statement" : "INSERT INTO ${table} (userid, name, age, street, city, state, zip)\nVALUES ('${userid}', '${name}', '${age}', '${street}', '${city}', '${state}', '${zip}')\nON CONFLICT (userid) DO UPDATE \nSET name = EXCLUDED.name,\n    age = EXCLUDED.age,\n    street = EXCLUDED.street,\n    city = EXCLUDED.city,\n    state = EXCLUDED.state,\n    zip = EXCLUDED.zip;",
+              "putsql-sql-statement" : "INSERT INTO staging (userid, name, age, street, city, state, zip)\nVALUES ('${userid}', '${name}', '${age}', '${street}', '${city}', '${state}', '${zip}')\nON CONFLICT (userid) DO UPDATE \nSET name = EXCLUDED.name,\n    age = EXCLUDED.age,\n    street = EXCLUDED.street,\n    city = EXCLUDED.city,\n    state = EXCLUDED.state,\n    zip = EXCLUDED.zip;",
               "Batch Size" : "100",
               "Obtain Generated Keys" : "false",
               "JDBC Connection Pool" : "0d4a0600-3bb0-3c00-8781-08e2fe834cc0",
@@ -2880,7 +2887,7 @@
               "groupId" : "3517f591-88c3-3dcc-8cb7-9eb20f90bbd5",
               "id" : "275017eb-d98f-3529-afad-a9e102eea378",
               "instanceIdentifier" : "32d4329a-c038-1da3-ff38-8aa40e8310b8",
-              "name" : "Query Staging",
+              "name" : "Query Staging to Insert Warehouse",
               "type" : "PROCESSOR"
             },
             "zIndex" : 0
@@ -2927,7 +2934,7 @@
               "groupId" : "3517f591-88c3-3dcc-8cb7-9eb20f90bbd5",
               "id" : "275017eb-d98f-3529-afad-a9e102eea378",
               "instanceIdentifier" : "32d4329a-c038-1da3-ff38-8aa40e8310b8",
-              "name" : "Query Staging",
+              "name" : "Query Staging to Insert Warehouse",
               "type" : "PROCESSOR"
             },
             "flowFileExpiration" : "0 sec",
@@ -3204,16 +3211,17 @@
             "properties" : {
               "dbcp-min-idle-conns" : "0",
               "Max Wait Time" : "500 millis",
-              "Database Driver Class Name" : "${DatabaseDriverClassName}",
+              "Database Driver Class Name" : "#{DatabaseDriverClassName}",
               "dbcp-min-evictable-idle-time" : "30 mins",
               "Max Total Connections" : "8",
               "dbcp-max-conn-lifetime" : "-1",
-              "Database Connection URL" : "jdbc:postgresql://localhost/${database}",
+              "Database Connection URL" : "jdbc:postgresql://localhost/#{database}",
               "dbcp-time-between-eviction-runs" : "-1",
-              "Database User" : "postgres",
+              "Database User" : "#{postgres_username}",
               "dbcp-soft-min-evictable-idle-time" : "-1",
-              "database-driver-locations" : "${DatabaseDriverLocation}",
-              "dbcp-max-idle-conns" : "8"
+              "database-driver-locations" : "#{DatabaseDriverLocation}",
+              "dbcp-max-idle-conns" : "8",
+              "Password" : "#{postgres_password}"
             },
             "propertyDescriptors" : {
               "kerberos-password" : {
@@ -3375,8 +3383,10 @@
           } ],
           "instanceIdentifier" : "32d43296-c038-1da3-6546-acf177a0b122",
           "labels" : [ ],
+          "logFileSuffix" : "",
           "name" : "InsertWarehouse",
           "outputPorts" : [ ],
+          "parameterContextName" : "DataLakeParams",
           "position" : {
             "x" : -2368.0,
             "y" : -672.0
@@ -3481,7 +3491,7 @@
             },
             "properties" : {
               "Support Fragmented Transactions" : "false",
-              "putsql-sql-statement" : "INSERT INTO ${table} (userid, name, age, street, city, state, zip)\nVALUES ('${userid}', '${name}', '${age}', '${street}', '${city}', '${state}', '${zip}')\nON CONFLICT (userid) DO UPDATE \nSET name = EXCLUDED.name,\n    age = EXCLUDED.age,\n    street = EXCLUDED.street,\n    city = EXCLUDED.city,\n    state = EXCLUDED.state,\n    zip = EXCLUDED.zip;",
+              "putsql-sql-statement" : "INSERT INTO warehouse (userid, name, age, street, city, state, zip)\nVALUES ('${userid}', '${name}', '${age}', '${street}', '${city}', '${state}', '${zip}')\nON CONFLICT (userid) DO UPDATE \nSET name = EXCLUDED.name,\n    age = EXCLUDED.age,\n    street = EXCLUDED.street,\n    city = EXCLUDED.city,\n    state = EXCLUDED.state,\n    zip = EXCLUDED.zip;",
               "Batch Size" : "100",
               "Obtain Generated Keys" : "false",
               "JDBC Connection Pool" : "ef45ab74-4478-3964-9a4e-00f01f8f672a",
@@ -3756,7 +3766,7 @@
             "identifier" : "275017eb-d98f-3529-afad-a9e102eea378",
             "instanceIdentifier" : "32d4329a-c038-1da3-ff38-8aa40e8310b8",
             "maxBackoffPeriod" : "10 mins",
-            "name" : "Query Staging",
+            "name" : "Query Staging to Insert Warehouse",
             "penaltyDuration" : "30 sec",
             "position" : {
               "x" : -3008.0,
@@ -3892,7 +3902,43 @@
         "remoteProcessGroups" : [ ]
       },
       "flowEncodingVersion" : "1.0",
-      "parameterContexts" : { },
+      "parameterContexts" : {
+        "DataLakeParams" : {
+          "componentType" : "PARAMETER_CONTEXT",
+          "inheritedParameterContexts" : [ ],
+          "name" : "DataLakeParams",
+          "parameters" : [ {
+            "description" : "",
+            "name" : "postgres_username",
+            "provided" : false,
+            "sensitive" : false,
+            "value" : "postgres"
+          }, {
+            "description" : "values: \n1. test\n2. production",
+            "name" : "database",
+            "provided" : false,
+            "sensitive" : false,
+            "value" : "test"
+          }, {
+            "description" : "",
+            "name" : "DatabaseDriverClassName",
+            "provided" : false,
+            "sensitive" : false,
+            "value" : "org.postgresql.Driver"
+          }, {
+            "description" : "",
+            "name" : "DatabaseDriverLocation",
+            "provided" : false,
+            "sensitive" : false,
+            "value" : "/home/vfilip/nifi/nifi-1.28.1/drivers/postgresql-42.7.4.jar"
+          }, {
+            "description" : "",
+            "name" : "postgres_password",
+            "provided" : false,
+            "sensitive" : true
+          } ]
+        }
+      },
       "parameterProviders" : { }
     }
   }
