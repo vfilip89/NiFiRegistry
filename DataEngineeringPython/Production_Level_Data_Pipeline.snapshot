@@ -2635,6 +2635,7 @@
           } ],
           "instanceIdentifier" : "d64989d7-0194-1000-6cd4-18f8d8baa72c",
           "labels" : [ ],
+          "logFileSuffix" : "",
           "name" : "ScanLake",
           "outputPorts" : [ {
             "allowRemoteAccess" : false,
@@ -2651,6 +2652,7 @@
             "scheduledState" : "ENABLED",
             "type" : "OUTPUT_PORT"
           } ],
+          "parameterContextName" : "DataLakeParams",
           "position" : {
             "x" : -2368.0,
             "y" : -1264.0
@@ -2737,6 +2739,7 @@
             },
             "properties" : {
               "icon-emoji" : ":robot_face:",
+              "webhook-url" : "#{SlackWebhookURL}",
               "webhook-text" : "Alert: VIP customer detected in Data Lake - ${name}",
               "channel" : "#studying-data-engineering",
               "username" : "NiFi Bot"
@@ -3934,6 +3937,11 @@
           }, {
             "description" : "",
             "name" : "postgres_password",
+            "provided" : false,
+            "sensitive" : true
+          }, {
+            "description" : "",
+            "name" : "SlackWebhookURL",
             "provided" : false,
             "sensitive" : true
           } ]
