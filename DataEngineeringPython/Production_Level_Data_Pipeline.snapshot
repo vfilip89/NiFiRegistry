@@ -1262,6 +1262,7 @@
           } ],
           "instanceIdentifier" : "db9cc053-0194-1000-db57-0b617e51882d",
           "labels" : [ ],
+          "logFileSuffix" : "",
           "name" : "ValidateStaging",
           "outputPorts" : [ {
             "allowRemoteAccess" : false,
@@ -1292,6 +1293,7 @@
             "scheduledState" : "ENABLED",
             "type" : "OUTPUT_PORT"
           } ],
+          "parameterContextName" : "DataLakeParams",
           "position" : {
             "x" : -3000.0,
             "y" : -664.0
@@ -1468,11 +1470,11 @@
               "argumentsStrategy" : "Command Arguments Property",
               "Max Attribute Length" : "256",
               "Output MIME Type" : "application/json",
-              "Working Directory" : "/home/vfilip/staging",
+              "Working Directory" : "#{gx_dir}",
               "Command Path" : "/home/vfilip/airflow_env/bin/python",
               "Argument Delimiter" : ";",
               "Ignore STDIN" : "false",
-              "Command Arguments" : "/home/vfilip/staging/validate_nifi_staging.py"
+              "Command Arguments" : "#{gx_validation_script}"
             },
             "propertyDescriptors" : {
               "argumentsStrategy" : {
@@ -3929,6 +3931,12 @@
             "sensitive" : false,
             "value" : "org.postgresql.Driver"
           }, {
+            "description" : "1. /home/vfilip/staging\n2. /home/vfilip/production_staging",
+            "name" : "gx_dir",
+            "provided" : false,
+            "sensitive" : false,
+            "value" : "/home/vfilip/staging"
+          }, {
             "description" : "",
             "name" : "DatabaseDriverLocation",
             "provided" : false,
@@ -3944,6 +3952,12 @@
             "name" : "SlackWebhookURL",
             "provided" : false,
             "sensitive" : true
+          }, {
+            "description" : "1. /home/vfilip/staging/validate_nifi_staging.py\n2. /home/vfilip/production_staging/production_validate_nifi_staging.py",
+            "name" : "gx_validation_script",
+            "provided" : false,
+            "sensitive" : false,
+            "value" : "/home/vfilip/staging/validate_nifi_staging.py"
           } ]
         }
       },
