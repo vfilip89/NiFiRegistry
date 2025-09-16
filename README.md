@@ -5,7 +5,7 @@
 ### **Overview**
 This repository showcases data engineering projects developed while studying **Data Engineering**. It covers **ETL workflows, automation, real-time processing, version control, monitoring, and cloud-based solutions** using:
 - **Apache NiFi, Airflow, Kafka, Spark, PostgreSQL, and Elasticsearch**
-- **Kubernetes, Minikube, Docker, Helm, NiFiKop**
+- **Kubernetes, Docker**
 - **Streaming & Batch Processing with Kafka and Spark (KRaft Mode)**
 
 ---
@@ -53,7 +53,7 @@ This repository showcases data engineering projects developed while studying **D
 ### 👉 **Databases**: PostgreSQL, Elasticsearch
 ### 👉 **Programming**: Python (pandas, psycopg2), SQL
 ### 👉 **Monitoring**: Kibana, NiFi REST API
-### 👉 **Containerization & Orchestration**: Docker, Kubernetes, Minikube, Helm, NiFiKop
+### 👉 **Containerization & Orchestration**: Docker, Kubernetes
 ### 👉 **Version Control**: GitHub, NiFi Registry
 ### 👉 **Cloud & Big Data**: AWS (S3, Lambda), GCP (BigQuery, Dataflow)
 
