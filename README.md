@@ -60,6 +60,7 @@ This repository showcases data engineering projects developed while studying **D
 ---
 
 ## 🚀 **Next Steps**
-- Expanding Kubernetes-based **NiFi clusters** with multiple nodes.
+- Exploring **Containerization & Orchestration** with Docker & Kubernetes
+- Exploring Cloud & Big Data Integration **AWS/GCP** for scalability
 
 📊 **My repositories are actively maintained & evolving! Stay tuned for more updates!**
